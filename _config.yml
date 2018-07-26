@@ -24,7 +24,9 @@ github_username:  0xvext
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "default", "dirt", "neon", "mint", "plum" "sunrise"
 plugins:
   - jekyll-feed
 
