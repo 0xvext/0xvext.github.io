@@ -1,0 +1,68 @@
+---
+title: Unicode symbol differences
+date: '2017-10-27 21:08:01'
+tags: unicode
+---
+
+Immediately after I submitted a comment to [Dr. Neal Krawetz's Hacker Factor blog](https://www.hackerfactor.com/blog/), I realized I had misunderstood and overlooked some important details of differences in Unicode characters.
+
+In his blog post "[All About Ratings](https://www.hackerfactor.com/blog/index.php?/archives/781-All-About-Ratings.html)," Dr. Krawetz describes his process for creating a new reader rating system with a handy visual indicator of an article's scoring. He described the characters he used as follows:
+
+> ... an empty diamond (◇), a half-diamond (⬖), a full diamond (◆), and a diamond with a dot in it for selection (◈). Under Firefox and Chrome, these are all the same size.
+
+I misinterpreted the above description as those characters rendering the same size **by default** in the browsers mentioned. In reality, what Dr. Krawetz was describing was that he had customized the rating display code to render them at the same size, which they do:
+
+![ratings](/assets/images/ratings.png)
+
+Or, at least I think they all do; there aren't any posts on the blog at this time with a rating that includes empty diamonds :)
+
+
+What confused me, however, is that in the body of his post, the diamond symbols clearly do not render as the same size:
+
+![diamonds](/assets/images/diamonds.png)
+
+I, being the good netizen that I am, quickly posted a comment to bring this to the good Doctor's attention... 
+
+![comment](/assets/images/comment.png)*
+
+... and immediately realized my mistake.
+![Paris_Tuileries_Garden_Facepalm_statue](/assets/images/Paris_Tuileries_Garden_Facepalm_statue.jpg)**
+
+A quick search on [Graphemica](https://graphemica.com) reveals that the unmodified version of those symbols are deliberately drawn at different sizes. Fun fact: in a modern browser you can simply tack the symbol you want to look up on Graphemica into the URL to see the details of that symbol. Much easier than trying to know all the names for unicode characters!
+
+[Diamond with left half black (U+2B16)](https://graphemica.com/⬖)
+[White diamond (U+25C7)](https://graphemica.com/◇)
+[Black diamond (U+25C6)](https://graphemica.com/◆)
+As an aside, the naming of those diamonds was a bit short-sighted; since the actual 'color' is arbitrary in any modern implementation. The power of hindsight!
+
+Looking at the details of the symbols, they are apparently from two different "blocks" of characters:
+
+![Screen-Shot-2017-10-27-at-5.20.15-PM](/assets/images/Screen-Shot-2017-10-27-at-5.20.15-PM.png)
+![Screen-Shot-2017-10-27-at-5.20.10-PM](/assets/images/Screen-Shot-2017-10-27-at-5.20.10-PM.png)
+
+
+The details of these two blocks are available from the [home of Unicode itself](https://unicode.org).
+
+[Geometric Shapes](https://unicode.org/charts/PDF/U25A0.pdf)
+[Miscellaneous Symbols and Arrows](https://unicode.org/charts/PDF/U2B00.pdf)
+
+What I found interesting is that, looking at the spec, the diamonds appear to be closer in size than what is rendered by default in Firefox. I'm working with some limited tools, so it's not pixel-perfect, but by my count, the mono-color diamonds are 23 pixels tall:
+![Screen-Shot-2017-10-27-at-5.38.04-PM](/assets/images/Screen-Shot-2017-10-27-at-5.38.04-PM.png)
+
+While the half-filled diamond is 24 pixels tall:
+![Screen-Shot-2017-10-27-at-5.39.02-PM](/assets/images/Screen-Shot-2017-10-27-at-5.39.02-PM.png)
+
+However, a close look at the difference in my browser shows a more significant difference:
+![Screen-Shot-2017-10-27-at-5.36.49-PM](/assets/images/Screen-Shot-2017-10-27-at-5.36.49-PM.png)
+
+I was curious as to why some symbols that are seemingly similar are rendered at different sizes. I haven't found a satisfactory answer to "why" yet, but it seems to be a somewhat arbitrary choice of the font designer, and how they have chosen to implement the Unicode standard. Depending on the font used, they might appear differently. 
+A couple community discussions on this subject with different symbols:
+[Superuser](https://superuser.com/questions/346514/related-unicode-characters-are-displayed-in-different-sizes-or-appear-misaligned)
+[StackOverflow](https://stackoverflow.com/questions/42966871/unicode-different-size-arrows)
+
+Anyway. Chalk the error up to being over-eager to help and not thinking things all the way through. No takebacks :\|
+
+
+\* Thanks to [Allie Brosh](https://hyperboleandahalf.blogspot.com/) for her site and hilarious and meaningful contributions to the world.
+
+** And thanks to [Wikimedia Foundation](https://commons.wikimedia.org/wiki/File:Paris_Tuileries_Garden_Facepalm_statue.jpg) for... everything.

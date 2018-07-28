@@ -46,3 +46,32 @@ plugins:
 #   - vendor/ruby/
 
 include: ["_pages"]
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      share: true
+      related: true
+      author_profile: true
+
+locale: "en-US"
+name: vext
+search: true
+
+author:
+  name   : "vext"
+  avatar : "/assets/images/vext-cropped.png"
+  bio    : "Hacker. Nerd. InfoSec pro. Armchair lawyer. Certifiable. Breaks things to rebuild them better. Understands opex decisions, but resents them. Bleeds purple."
+  twitter : 0xvext
+  github : 0xvext
+#  email  : # optional
+#  uri    : "http://your-site.com"
+#  home   : # null (default), "absolute or relative url to link to author home"
+
+paginate: 100 # amount of posts to show
+paginate_path: /page:num/

@@ -1,0 +1,102 @@
+---
+title: LastPass versus 1Password versus KeePass, part 4
+date: '2017-12-06 18:26:37'
+tags: reviews
+---
+
+
+# Part 4: Comparison of features and traits (continued)
+Rather than break sections up the way reviews often are (all about option 1, then all about option 2), I'll be segmenting this post by feature comparisons. Each comparison section will review one of the considerations I made when evaluating which password solution to use. I will touch on each of the three assessed solutions within each section.
+
+## Comparison 4 - Business model and pricing
+Here I will go into my observations and opinions on the business model and cost of each solution, and the current and future implications of those. As with the rest of these posts, this is all moment-in-time as of this writing (December, 2017), so your mileage may vary. Keep in mind that all these observations and opinions are from the perspective of a current or former customer/trial user.
+
+### LastPass
+#### Business model
+LastPass was a standalone company specializing in providing a password management solution. They charged what was, to be fair, an insanely low rate for their service/product for a number of years. This combined with the quality of their work won them a very large customer base, and made them ripe for the picking when it came to mergers and acquisitions.
+Enter [LogMeIn](https://en.wikipedia.org/wiki/LogMeIn), a notable SaaS cloud provider whose first products were focused on remote access and administration.
+LastPass is now one of multiple products (some originally developed, some acquired by LogMeIn) under the LogMeIn umbrella. LogMeIn, after the acquisition, has focused on making visible improvements to the product including visual design (GUI), and added convenience features (emergency account recovery, family sharing). There has also been a significant price increase for the paid version since the acquisition (during my time as a customer, the price went from $12/year to the current $24/year, a 100% increase).
+Interestingly, as of November 2016, all the primary functionality of LastPass is offered as a "freemium" service, with their bottom tier of service being offered entirely for free, customers only having to pay for more niche functionality or more service-heavy features (such as secure file storage, family sharing plans, etc.).
+Now, it's a bit over-simplistic, but there is usually some truth in the "if it's free, you're the product" adage. None of the other major players (at least the ones I have looked into) in the password storage game offer their service for free, so LastPass is unique in this regard, for their level of security and sophistication. Since they fall under the LogMeIn privacy policy (which I covered [previously](https://vext.info/lastpass-versus-1password-versus-keepass-part-2/)), this is not encouraging, in my opinion. It is also worth mentioning that LogMeIn's flagship product [used to be free](https://blog.logmein.com/it-management/logmein-changes), so don't take the bet that LastPass will always operate on this model.
+
+Their solution is cross-platform, with an impressive footprint over different supported browsers and operating systems. The up side to this is that you can probably run LastPass natively, regardless of whether you are Mac/Windows/Linux, or IE/Chrome/Firefox/Safari... even Opera is supported. That said, since they have such a wide development reach, version and feature differences do pop up from time to time. I ran into a compatibility issue a couple months ago with Firefox 64-bit and the then-current version of LastPass. More on that in a future post.
+
+LastPass focuses on their browser plugins as the main product, though they do offer an older, less up-to-date offline password vault solution called LastPass Pocket. On their own downloads page they [recommend not using it](https://lastpass.com/misc_download2.php), so it does not instill the user with confidence.
+
+I think it is telling and meaningful that the "About us" section on the LastPass website no longer describes what [LastPass was all about](https://web.archive.org/web/20120415095609/http://lastpass.com:80/aboutus_companyinfo.php) (from the old version, "The LastPass team believes your online experience can be easier, faster and safer."), but rather redirects to the LogMeIn "about us" page (which currently offers this as their intro sentence: "Simplifying how people interact with each other and the world around them to drive meaningful insight, deeper relationships and better outcomes for all has helped LogMeIn grow to become one of the world’s top 10 SaaS companies with a leadership position in every one of our markets."). You be the judge.
+
+I wish I had reviewed where the LastPass systems were hosted prior to the acquisition, but I'm unfortunately not sure about that. As of today, review of their DNS records and IP ranges shows that they have at least some presence in the Azure cloud, for their main website. 
+Since I no longer use the product I have not performed an analysis of where the vault syncronization traffic goes (whether self-hosted, Azure, or some other provider).
+
+LastPass continues to run an open bug bounty through [Bugcrowd](https://bugcrowd.com/lastpass).
+
+#### Pricing
+As mentioned above, LastPass used to run $12/year, which was almost certainly unsustainable. I often commented at the time that I didn't know how they could offer the service at that price. LogMeIn has taken care of that and doubled the price as of August, 2017 to $24/year. While it is still a reasonable price, the quality of support has dropped since the acquisition (more on that [here](https://vext.info/lastpass-versus-1password-versus-keepass-part-3/)), and I no longer consider it worth paying for the service just to get premium support.
+There are [other extras](https://www.lastpass.com/pricing) included in the "Premium" tier, but none of them are very compelling.
+LastPass also has a "Families" plan, which costs $48/year, or the cost of two premium plans. For families of 3+ who all need to share passwords together, this might make sense, but I'm not convinced. Add in the complications this must introduce in terms of [key escrow](https://en.wikipedia.org/wiki/Key_escrow), and there may also be a negative impact on the security of the solution under such a plan. I say "may be," since I do not know for certain if the base version of LastPass utilizes key escrow as well, which it might.
+They also offer "Teams" and "Enterprise" levels of service, but I have not evaluated those, and so will not comment on their pricing or value.
+
+### 1Password
+#### Business model
+1Password is a cousin of LastPass in terms of its intent, but they are an entirely separate organization with their own approach and philosophies. In some ways I find their views refreshing, particularly in light of the acquisition described above, but I also have found myself not particularly in line with some of their opinions regarding security.
+The parent company of 1Password, [AgileBits](https://agilebits.com/), does not at this time advertise any other products, so they appear to be a dedicated organization focused on the development of 1Password at this time.
+
+The original versions of 1Password were stand-alone software, installed locally on a user's machine, without any web-based sync service. That changed in August of 2016 with the [announcement](https://blog.agilebits.com/2016/08/03/new-1password-hosted-service/) of their new subscription model. Since that change, the 1Password website now focuses entirely on their cloud-based service to the degree that finding the standalone offline application requires the user knowing it exists, and searching to find the hidden legacy store page where it can be purchased. As of this writing I can't even find the link anymore, so they may have finally removed it (prior to this it was buried a couple of clicks deep in an FAQ, and not prominently placed on their pricing page).
+It's clear that 1Password no longer intends to focus on the standalone version of the product in the future, which is of course their prerogative, but some of their [responses](https://news.ycombinator.com/item?id=12173892) to date smack of this passage from Douglas Adams' "The Hitchhiker's Guide to the Galaxy:"
+
+> “But the plans were on display…”
+> “On display? I eventually had to go down to the cellar to find them.”
+> “That’s the display department.”
+> “With a flashlight.”
+> “Ah, well, the lights had probably gone.”
+> “So had the stairs.”
+> “But look, you found the notice, didn’t you?”
+> “Yes,” said Arthur, “yes I did. It was on display in the bottom of a locked filing cabinet stuck in a disused lavatory with a sign on the door saying ‘Beware of the Leopard.” 
+
+1Password - at least their main webpage - appears to be hosted out of AWS. Once again since I am not a current user of the product/service, I have not performed any technical analysis to determine if they self-host or purely utilize third-party cloud services for infrastructure.
+
+1Password also runs an open bug bounty through [Bugcrowd](https://bugcrowd.com/agilebits).
+
+#### Pricing
+1Password's pricing is similar to, but a little bit higher, than LastPass. They do not offer a free version (though you can get a 30-day trial of the service), and their base option is $36/year (technically $35.88, but I'm not an accountant). They also offer a families plan for just shy of $60/year, so overall they are about 1.5x the price of LastPass.
+Of note, they do not offer traditional two-factor authentication on the web-interface of their service unless you opt for their "Teams" service offering, which is $3.99/year/user (or $48/year for one person, roughly). More on their 2FA philosophy in a later post.
+I have no idea what the current price for the standalone, offline version of 1Password is, since I can't find it anymore. I believe it was comparable to about one year of the online service. I've not taken to Google to try and find the "hidden" page. I know some folks love finding "secret deals" through such avenues, but given that I am reviewing the company and their offering, if I have to go to that length, it's a strike against them, in my book.
+
+### KeePass
+#### Business model
+This entry is of course the odd one out. As a free, open-source project, KeePass doesn't have a business model, per se. It also does not have the backing of a large or even small company to keep the project on track and funded. The software's creator, [Dominik Reichl](https://keepass.info/contact.html), accepts donations to the project, but it is, as I understand it, a labor of love. The project is hosted on SourceForge, which I've commented on [previously](https://vext.info/lastpass-versus-1password-versus-keepass-part-3/), and he is not very responsive to the contact form on his website, so I don't have much juicy for this section.
+
+#### Pricing
+Free as in beer. Donate to support the project if you think it's worthwhile and would like to see it continue. Nothing much to dissect, here.
+
+### Comparison matrix
+<table>
+    <tr>
+        <td>Solution</td>
+        <td>Model</td>
+        <td>Price</td>
+        <td>Comment</td>
+    </tr>
+    <tr>
+        <td>LastPass</td>
+        <td>Freemium</td>
+        <td>$0 or $24+/year</td>
+        <td>No longer worth paying for</td>
+    </tr>
+    <tr>
+        <td>1Password</td>
+        <td>Commercial</td>
+        <td>$36+/year</td>
+        <td>Not worth the premium</td>
+    </tr>
+    <tr>
+        <td>KeePass</td>
+        <td>Free, OSS</td>
+        <td>$0, or donate</td>
+        <td>All the pros and cons of free, OSS</td>
+    </tr>
+</table>
+
+
+
+There is more to come, yet. Future posts will get into more detailed feature descriptions and comarisons, an overview of a performance/support issue I encountered, and my assessment of the security implications of each solution.
