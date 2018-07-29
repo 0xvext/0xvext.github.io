@@ -22,6 +22,10 @@ Below are tests of various markdown.
 
 ---
 
+Paragraph.
+Same paragraph.
+
+New paragraph.
 
 # H1 header
 
@@ -55,11 +59,9 @@ Third line
 	1. Sub item
 2. Ordered list item 2
 
-3. Same ordered list
-
 Paragraph
 
-1. New ordered list (after another para)
+1. Separate ordered list (after a para)
 
 * Unordered list item 1
 * Unordered list item 2
@@ -78,27 +80,26 @@ Term
 |=====
 | Foot1   | Foot2   | Foot3
 
-A [link](http://example.com) to a page.
+An [inline link](http://example.com) to a page.
 
-A [link][examplecom] to a page.
+A defined [link][examplecom] to a page.
 
 [examplecom]: http://example.com
 
-A link to the [example site].
+A self-defined link to the [example site].
 
 [example site]: http://example.com
 
-An image: ![gras](img/image.jpg)
+An image: ![gras](../../../assets/images/vext-cropped.png)
 
 This is a text with a footnote[^1].
 
-[^1]: And here is the definition.
+[^1]: And here is the definition (displays at end of document).
 
-This is an HTML example.
+This is an example of a TLA example.
 
-*[HTML]: Hyper Text Markup Language
+*[TLA]: Three Letter Acronym
 
 This is *red*{: style="color: red"}.
 
 **bold** or *italics* or **_both_** or ~~strikethrough~~. 
-

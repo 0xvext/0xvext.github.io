@@ -62,25 +62,25 @@ Term
 |=====
 | Foot1   | Foot2   | Foot3
 
-A [link](http://example.com) to a page.
+An [inline link](http://example.com) to a page.
 
-A [link][examplecom] to a page.
+A defined [link][examplecom] to a page.
 
 [examplecom]: http://example.com
 
-A link to the [example site].
+A self-defined link to the [example site].
 
 [example site]: http://example.com
 
-An image: ![gras](img/image.jpg)
+An image: ![gras](../../../assets/images/vext-cropped.png)
 
 This is a text with a footnote[^1].
 
-[^1]: And here is the definition.
+[^1]: And here is the definition (displays at end of document).
 
-This is an HTML example.
+This is an example of a TLA example.
 
-*[HTML]: Hyper Text Markup Language
+*[TLA]: Three Letter Acronym
 
 This is *red*{: style="color: red"}.
 
