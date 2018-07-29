@@ -18,7 +18,7 @@ To do:
 * Optimize workflow
 * Write up thoughts on the overall experience.
 
-Below are tests of various markdown 
+Below are tests of various markdown.
 
 ---
 
