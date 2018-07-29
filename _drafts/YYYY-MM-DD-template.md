@@ -1,23 +1,9 @@
----
-title: 'Title here'
-date: 'YYYY-MM-DD HH:MM:SS'
-tags: template
----
-
 Paragraph.
 Same paragraph.
 
 New paragraph.
 
 # H1 header
-
-## H2 header
-
-### H3 header
-
-#### H4 header
-
-##### H5 header
 
 ###### H6 header
 
@@ -51,7 +37,6 @@ Paragraph
 Term
 : Definition for term
 
-
 | Header1 | Header2 | Header3 |
 |:--------|:-------:|--------:|
 | cell1   | cell2   | cell3   |
@@ -78,11 +63,10 @@ This is a text with a footnote[^1].
 
 [^1]: And here is the definition (displays at end of document).
 
-This is an example of a TLA example.
+This is an example of a TLA.
 
 *[TLA]: Three Letter Acronym
 
 This is *red*{: style="color: red"}.
 
 **bold** or *italics* or **_both_** or ~~strikethrough~~. 
-
