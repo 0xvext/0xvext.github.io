@@ -11,7 +11,6 @@ URLTITLE=$(printf "$TITLE" | sed 's/ /-/g' | sed -e 's/\(.*\)/\L\1/' | sed 's/[^
 # Name, create, and initialize draft file
 FILEPATH="./_drafts/"
 FILENAME="$FILEDATE-$URLTITLE.md"
-#printf "$FILEPATH$FILENAME\n"
 touch "$FILEPATH$FILENAME"
 printf -- "---\n" > "$FILEPATH$FILENAME"
 printf "title: '$TITLE'\n" >> "$FILEPATH$FILENAME"
@@ -19,6 +18,7 @@ printf "date: '$HEADERDATE'\n" >> "$FILEPATH$FILENAME"
 printf "tags: \n" >> "$FILEPATH$FILENAME"
 printf -- "---\n\n" >> "$FILEPATH$FILENAME"
 cat ./_drafts/YYYY-MM-DD-template.md >> "$FILEPATH$FILENAME"
+# Open file for editing
 atom "$FILEPATH$FILENAME"
 ./publish.sh
 ./gitsync.sh

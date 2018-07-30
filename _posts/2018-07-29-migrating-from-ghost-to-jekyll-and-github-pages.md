@@ -30,7 +30,7 @@ I do want to be clear that my decision to migrate away from Ghost is not meant t
 
 Ghost doesn't actually come up with any vulnerabilities in such a search. Some might think this to be a good thing, but I actually consider it a **worse** situation: it means that nobody is finding, or at least that nobody seems to be reporting and publishing vulnerabilities on Ghost.
 
-There is a reason I'm not in infrastructure support anymore. It's a full time job, and I would rather focus on the content of this blog than worrying over whether or not the blog software itself has been pwned. Troy
+There is a reason I'm not in infrastructure support anymore. It's a full time job, and I would rather focus on the content of this blog than worrying over whether or not the blog software itself has been pwned. Troy Hunt [seems to share this sentiment](https://www.troyhunt.com/its-a-new-blog/).
 
 *[CMS]: Content Management System
 
@@ -47,10 +47,10 @@ Now that I have everything working (with the exception of [a few things](http://
 
 ![Atom](../../../assets/images/2018-07-30 16-35-18.png)
 
-I'm also using the CLI Github client, so I've thrown together some quick-and-dirty Bash scripts in the spirit of "If I typed it twice I should have scripted it once." The contents of those scripts are below, and they are also included in the root folder of [my Github pages repository](https://github.com/0xvext/0xvext.github.io). My general process is to run `newpost.sh` which creates a new draft, names it based on a title that I enter plus the date, auto-fills the header space and imports a collection of markdown references that I put together for my own reference. That list keeps changing, as I better learn markdown.
+I'm also using the CLI Github client, so I've thrown together some quick-and-dirty Bash scripts in the spirit of "If I typed it twice I should have scripted it once." The contents of those scripts are below, and they are also included in the root folder of [my Github pages repository](https://github.com/0xvext/0xvext.github.io). My general process is to run `newpost.sh` which creates a new draft, names it based on a title that I enter plus the date, auto-fills the header space and imports a collection of markdown references that I put together for my own reference. That list keeps changing, as I better learn markdown, but most of it was taken from [here](https://kramdown.gettalong.org/syntax.html).
 While I'm editing the post, the `publish.sh` script waits for a "y" response, upon which event it will move the draft of the identified file into the _posts folder and trigger `gitsync.sh` which initiates a `git add`, `git commit`, and a `git push` series of commands to upload the new post(s).
 
-#[CLI]: Command Line Interface
+*[CLI]: Command Line Interface
 
 # Automation scripts
 ## newpost.sh
@@ -68,7 +68,6 @@ URLTITLE=$(printf "$TITLE" | sed 's/ /-/g' | sed -e 's/\(.*\)/\L\1/' | sed 's/[^
 # Name, create, and initialize draft file
 FILEPATH="./_drafts/"
 FILENAME="$FILEDATE-$URLTITLE.md"
-#printf "$FILEPATH$FILENAME\n"
 touch "$FILEPATH$FILENAME"
 printf -- "---\n" > "$FILEPATH$FILENAME"
 printf "title: '$TITLE'\n" >> "$FILEPATH$FILENAME"
@@ -76,6 +75,7 @@ printf "date: '$HEADERDATE'\n" >> "$FILEPATH$FILENAME"
 printf "tags: \n" >> "$FILEPATH$FILENAME"
 printf -- "---\n\n" >> "$FILEPATH$FILENAME"
 cat ./_drafts/YYYY-MM-DD-template.md >> "$FILEPATH$FILENAME"
+# Open file for editing
 atom "$FILEPATH$FILENAME"
 ./publish.sh
 ./gitsync.sh
@@ -94,7 +94,7 @@ for FILE in ./_drafts/*; do
 		printf "Is $FILE ready to publish?\n"
 		printf "[y/n]: "
 		read ANSWER
-		# If file is read, move to _posts directory
+		# If file is ready, move to _posts directory
 		if [ $ANSWER == 'y' ]; then
 			mv $FILE ./_posts/
 		fi

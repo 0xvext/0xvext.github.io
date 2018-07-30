@@ -8,7 +8,7 @@ for FILE in ./_drafts/*; do
 		printf "Is $FILE ready to publish?\n"
 		printf "[y/n]: "
 		read ANSWER
-		# If file is read, move to _posts directory
+		# If file is ready, move to _posts directory
 		if [ $ANSWER == 'y' ]; then
 			mv $FILE ./_posts/
 		fi
