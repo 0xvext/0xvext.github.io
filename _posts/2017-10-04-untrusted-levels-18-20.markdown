@@ -18,10 +18,10 @@ This level is presented as a "side scroller" view, complete with jump and gravit
 ![Screen-Shot-2017-10-03-at-9.18.40-PM](/assets/images/Screen-Shot-2017-10-03-at-9.18.40-PM.png)
 
 So, if gravity kills us, let's disable gravity:
-```
+~~~ javascript
 }
     function gravity() {
-```
+~~~
 With gravity redefined to do nothing, we can easily float across the chasm to the exit:
 ![Screen-Shot-2017-10-03-at-9.24.27-PM](/assets/images/Screen-Shot-2017-10-03-at-9.24.27-PM.png)
 
@@ -55,7 +55,7 @@ I was starting to get annoyed when, mostly by accident, I stumbled upon somethin
 ![Screen-Shot-2017-10-03-at-8.57.22-PM](/assets/images/Screen-Shot-2017-10-03-at-8.57.22-PM.png)
 
 Armed with this knowledge, acquiring the function phone is trivial. Equipped with the phone, why don't we give the boss a taste of his own medicine?
-```
+~~~ javascript
 map.getPlayer().setPhoneCallback(function () {
         var player = map.getPlayer();
         
@@ -71,7 +71,7 @@ map.defineObject('myBullet', {
 })
 
 map.placeObject(player.getX(), player.getY() - 2, 'myBullet');
-```
+~~~
 This code creates a new object (myBullet) which follows the same rules as the existing bullets, except it moves upward. For style, it's also blue and uses the pipe symbol (|).
 
 Now it's on. In moments the boss is being shredded to bits:
