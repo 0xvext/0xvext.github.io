@@ -31,7 +31,7 @@ This drone will move every time the player moves, using some simple logic to alw
 Our injection point is outside the definition of the drone, but still within the level's main setup function, just after the placement of various elements on the map.
 My first thought to solve this problem was to create a static obstruction of some kind on the map to interrupt the drone from reaching the player long enough to slip past to the exit. That might be possible, but in a few attempts I realized it was prone to failure and required too much precision by the player to ensure success. It was also a boring way to approach the problem.
 I started over and decided to make a drone of my own. This drone would follow the same logic of the attack drone, but instead of being attracted to the player, it would be attracted to the attack drone. The code I came up with was based on the definition of the attack drone:
-```
+~~~ javascript
     map.defineObject('defenseDrone', {
             'type': 'dynamic',
             'symbol': 'D',
@@ -41,18 +41,18 @@ I started over and decided to make a drone of my own. This drone would follow th
             }
         });
     map.placeObject(2, 2, 'defenseDrone');
-   ```
+~~~
 He might not be as explosive as the attack drone, but a quick test reveals that when the two meet, their mirrored logic prevents the attack drone from pursuing the player long enough for the player to reach the exit:
 ![Screen-Shot-2017-09-08-at-9.32.16-AM](/assets/images/Screen-Shot-2017-09-08-at-9.32.16-AM.png)![Screen-Shot-2017-09-08-at-9.32.39-AM](/assets/images/Screen-Shot-2017-09-08-at-9.32.39-AM.png)![Screen-Shot-2017-09-08-at-9.33.12-AM](/assets/images/Screen-Shot-2017-09-08-at-9.33.12-AM.png)![Screen-Shot-2017-09-08-at-9.33.57-AM](/assets/images/Screen-Shot-2017-09-08-at-9.33.57-AM.png)![Screen-Shot-2017-09-08-at-9.34.12-AM](/assets/images/Screen-Shot-2017-09-08-at-9.34.12-AM.png)![Screen-Shot-2017-09-08-at-9.34.34-AM](/assets/images/Screen-Shot-2017-09-08-at-9.34.34-AM.png)
 
 Note that this still requires the player to avoid making a mistake, as blindly rushing to the exit can result in the attack drone intercepting the player. Since risk management is the name of the game in security, I wanted to make this fool proof, giving the attack drone zero chance to intercept the player.
 My admittedly inelegant solution was to create three more drones, and place them such that they would quickly converge and surround the attack drone, regardless of how the player moves. I had to get a little creative with the placement due to some bias in the movement logic:
-```
-   map.placeObject(40, 12, 'defenseDrone');
+~~~ javascript
+    map.placeObject(40, 12, 'defenseDrone');
     map.placeObject(41, 11, 'defenseDrone');
     map.placeObject(44, 16, 'defenseDrone');
     map.placeObject(45, 15, 'defenseDrone');
-```
+~~~
 ![Screen-Shot-2017-09-08-at-9.46.17-AM](/assets/images/Screen-Shot-2017-09-08-at-9.46.17-AM.png)
 ![Screen-Shot-2017-09-08-at-9.46.33-AM](/assets/images/Screen-Shot-2017-09-08-at-9.46.33-AM.png)![Screen-Shot-2017-09-08-at-9.46.57-AM](/assets/images/Screen-Shot-2017-09-08-at-9.46.57-AM.png)
 
@@ -68,13 +68,13 @@ Fortunately, there is a new mechanism introduced to the player: the function pho
 With a simple press of the Q key, the player can activate a function that is kindly defined as blank with our code injection point placed right in the middle of the definition. Arbitrary code execution, anyone?
 
 Some experimentation reveals that the player icon color determines progress through the locks: if the player is green, the green locks can be passed. If the player is red, the red locks can be passed, and so on. With this understanding, we need to define the function called by the phone to cycle through the colors:
-```
+~~~ javascript
 if (player.getColor() == '#0f0'){player.setColor('#f00')}
         else if (player.getColor() == '#f00'){player.setColor('#ff0')}
         else if (player.getColor() == '#ff0'){player.setColor('#0f0')};
-```
+~~~
 
 With this in place, the player can toggle through the three colors at each appropriate location, ultimately reaching the exit:
 ![Screen-Shot-2017-09-08-at-10.13.20-AM](/assets/images/Screen-Shot-2017-09-08-at-10.13.20-AM.png)
 
-This level illustrates the concept of functions that can be defined and called at will during the execution of the program. This is distinct from the prior examples which all required code changes to take place at the time of level generation. It also illustrates the danger of arbitrary code execution.
+This level illustrates the concept of functions that can be defined and called at will during the execution of the program. This is distinct from the prior examples which required code changes to take place at the time of level generation. It also illustrates the danger of arbitrary code execution.
