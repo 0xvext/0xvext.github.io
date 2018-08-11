@@ -5,11 +5,11 @@ tags: fail2ban
 ---
 
 # Cheat-sheet version:
-```
+~~~ bash
 apt install fail2ban
 printf "[Init]\nblocktype = DROP" > /etc/fail2ban/action.d/iptables-blocktype.local
 service fail2ban restart
-```
+~~~
 
 # Full post:
 
