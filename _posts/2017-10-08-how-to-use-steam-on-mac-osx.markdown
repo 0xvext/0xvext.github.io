@@ -5,14 +5,14 @@ tags: steam
 ---
 
 # Cheat-sheet version:
-```
+~~~ bash
 USER=$(whoami)
 cd /Users/${USER}/Library/Application\ Support/Steam/Steam.AppBundle/Steam/Contents/MacOS/public; ls *.res | while read line ; do file=$(echo $line | tr '[:upper:]' '[:lower:]'); mv $line $file; done
 cd /Users/${USER}/Library/Application\ Support/Steam/Steam.AppBundle/Steam/Contents/MacOS/steam/cached/; ls *.res | while read line ; do file=$(echo $line | tr '[:upper:]' '[:lower:]'); mv $line $file; done
 cd /Users/${USER}/Library/Application\ Support/Steam/Steam.AppBundle/Steam/Contents/MacOS/friends; ls *.res | while read line ; do file=$(echo $line | tr '[:upper:]' '[:lower:]'); mv $line $file; done
 cd /Users/${USER}/Library/Application\ Support/Steam/Steam.AppBundle/Steam/Contents/MacOS/graphics; ls *.tga | while read line ; do file=$(echo $line | tr '[:upper:]' '[:lower:]'); mv $line $file; done
 cd /Users/${USER}/Library/Application\ Support/Steam/Steam.AppBundle/Steam/Contents/MacOS/servers; ls *.tga | while read line ; do file=$(echo $line | tr '[:upper:]' '[:lower:]'); mv $line $file; done
-```
+~~~
 
 # Full post:
 Valve seems to have forgotten that OSX can (and should) be installed using a case-sensitive file system. Installing Steam is successful, but attempting to run it results in a blank login screen on such a system. The fix is to rename all the .res and .tga files in the Steam application folder to lower case, because reasons. Fortunately user Asturaz provided an easy script to perform this change on the Steam forums [here](https://steamcommunity.com/discussions/forum/2/282992646978253149/#c282992646985999495).
