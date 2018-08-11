@@ -1,7 +1,7 @@
 ---
 title: 'Migrating from Ghost to Jekyll and Github Pages'
 date: '2018-07-29 23:32:46'
-tags: jekyll ghost 'github pages'
+tags: jekyll ghost githubpages
 ---
 
 As previously posted, I performed a migration from my prior setup, running [Ghost](https://ghost.org), to this current setup using [Jekyll](https://jekyllrb.com) as my content generator and hosting the site on [Github Pages](https://pages.github.com). This post won't be a full technical how-to, but it will describe, at a high level, the reasoning behind the migration, a bit about my experience along the way, and some of my workflow on the new platform.
