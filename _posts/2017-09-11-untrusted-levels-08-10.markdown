@@ -12,7 +12,7 @@ This will contain my solutions and explanations for the various levels in the ga
 ### Level 8: intoTheWoods.js
 This level finds our adventurer entering a new region, filled with trees (♣) and large arrangements of blocks called fortresses. As far as I can tell the fortresses don't actually do anything... but I expect their code will come in useful in a future level. As for code injection, we are strictly limited to entering the name of a function to call from a list of pre-created functions.
 
-The forest itself is the main hurdle, with a randomly-generated placement of trees that never seem to have an open path all the way through to the exit. Fortunately, our function phone can simply be assigned to call the same function that originally generated the trees, re-drawing them in a new random pattern. The player than thus make as much progress toward the exit as possible, then regenerate the trees in order to advance further:
+The forest itself is the main hurdle, with a randomly-generated placement of trees that never seem to have an open path all the way through to the exit. Fortunately, our function phone can simply be assigned to call the same function that originally generated the trees, re-drawing them in a new random pattern. The player can thus make as much progress toward the exit as possible, then regenerate the trees in order to advance further:
 ![Screen-Shot-2017-09-11-at-10.09.48-AM](/assets/images/Screen-Shot-2017-09-11-at-10.09.48-AM.png)
 ![Screen-Shot-2017-09-11-at-10.10.01-AM-1](/assets/images/Screen-Shot-2017-09-11-at-10.10.01-AM-1.png)
 ![Screen-Shot-2017-09-11-at-10.10.08-AM](/assets/images/Screen-Shot-2017-09-11-at-10.10.08-AM.png)
@@ -29,11 +29,11 @@ When the player moves, the raft (▓) will advance from top of the river to the 
 ... but of course there is.
 To solve the problem, we need to instruct the raft to move back in the opposite direction. We can use the function phone to make this toggle.
 Note that for the first time, in this level we must enter the full text of assigning the function call to the phone, because it is not placed for us. Fortunately, we can refer back to the previous levels to get the code, and instruct it to set the direction of the raft:
-```   
+~~~ javascript
    map.getPlayer().setPhoneCallback(function () {
         raftDirection = 'up';
     });
-```
+~~~
 
 After hopping onto the raft, a press of the Q key will change the raft's direction. Then, moving up in a straight line will safely transfer the player across the dangerous waters.
 
@@ -50,23 +50,23 @@ Similar to the last encounter, some of the drones immediately pursue and kill th
 As the level's description hints, we must change the drones' behavior in order to survive. We have three injection points in this code, each within the defintion of the behavior for the three drone types.
 
 Ultimately, the solution I found was to leave the "reinforcementDrones" (yellow) stationary, to insert the following code into the "attackDrones" (red):
-```
+~~~ javascript
             if (me.canMove('up')) {
             	me.move('up');
             }
             else if (me.canMove('left')) {
             	me.move('left');
             }
-```
+~~~
 And to insert the following code into the "defenseDrones" (green):
-```
+~~~ javascript
             if (me.canMove('up')) {
             	me.move('up');
             }
             else if (me.canMove('right')) {
             	me.move('right');
             }
-```
+~~~
 
 Instructing the defenseDrones to simply move left would also work, though it would require more complicated movement for the player. Plus, I liked the symmetry of the two groups moving away from the center :)
 
