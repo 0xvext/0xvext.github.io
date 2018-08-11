@@ -52,7 +52,7 @@ This still isn't perfect, and I have identified some level layouts where it won'
 This level took a little trial and error, but I wasn't stuck nearly as long as the last one. It's a combinaton of figuring out the correct code **and** identifying the correct order in a series of moves to solve a puzzle layout:
 ![Screen-Shot-2017-09-15-at-9.50.22-AM](/assets/images/Screen-Shot-2017-09-15-at-9.50.22-AM.png)
 
-The code insertion point we have access to is limited to a single portion: what items is removed from the player inventory when passing through a 'greenLock' (⊗) object.
+The code insertion point we have access to is limited to a single portion: which item is removed from the player inventory when passing through a 'greenLock' (⊗) object.
 
 I did some experimentation to see if simply substituting one key for another would work, but there are just enough keys and gates to keep that from working. We have to be a bit more tricky:
 
