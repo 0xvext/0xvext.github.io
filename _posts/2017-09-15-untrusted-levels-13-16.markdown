@@ -16,7 +16,7 @@ Due to the order of the 'if' statements, as soon as the robot is a couple spaces
 
 There are probably a number of ways to solve this, but I went for a very specific solution that I put at the beginning of the algorithm so that if the player ever stands on the very bottom row of the map, the robot will move 'up' regardless of any other logic. The final code ended up being:
 
-```
+~~~ javascript
 var moves = ['up','down','left','right'];
 //Determine the distance between the robot and the player as (x,y) values             
     var leftDist = me.getX() - player.getX();
@@ -44,7 +44,7 @@ var moves = ['up','down','left','right'];
     if (me.canMove(direction)) {
         me.move(direction);
     }
-```
+~~~
 
 This still isn't perfect, and I have identified some level layouts where it won't work, but it handles the majority of level layouts. I still have some refining to do on the algorithm. My next idea is to replace the code with a full-control model for the robot, rather than relying on it to path-find, and taking random movement out of the picture completely. A little less interesting, perhaps, but more reliable. I'm sure there is a way to fully automate it in a more reliable fashion, as well. Perhaps if another level requires pathfinding I will focus on a better version of the automated approach.
 
