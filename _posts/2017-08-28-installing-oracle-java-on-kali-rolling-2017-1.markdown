@@ -6,6 +6,7 @@ tags: kali
 
 # Cheat-sheet version:
 Download [Oracle JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html). 
+
 `sudo apt install java-package`
 `make-jpkg jre-8u144-linux-x64.tar.gz`
 `sudo dpkg -i oracle-java8-jre_8u144_amd64.deb`
