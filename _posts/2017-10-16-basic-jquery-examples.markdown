@@ -4,12 +4,12 @@ date: '2017-10-16 01:05:28'
 tags: cheatsheets
 ---
 
-I recently went through the first two levels of the free intro tutorial at http://try.jquery.com in order to build some basic jQuery familiarity (more on why soon).
+I recently went through the first two levels of the free intro tutorial at [JQuery](http://try.jquery.com) in order to build some basic jQuery familiarity (more on why soon).
 Below are my shorthand notes and descriptions. I highly encourage visiting the site if you have never touched jQuery before, as it builds the foundational knowledge needed for understanding how jQuery is used on the web.
 
 ---
 
-```
+~~~ javascript
 $("h2") # This is the shorthand form of calling jQuery code. The h2 will select any <h2> elements in the DOM.
 $("span").text() # This will select the text "object" that is found under any (all) <span> elements in the DOM.
 $("span").text("STUFF") # Similar to above, but this will set the value of the text object to STUFF.
@@ -31,5 +31,5 @@ $("#id").find("li").last() # Similar to above, but selecting the last <li> eleme
 $("#id").find("li").last().prev() # Select the <li> element one previous to the final element in the named id.
 $(".class").parent() # Select the parent element of any element in the named class.
 $("#id").children() # Select the children elements of the element with the named id.
-```
+~~~
 More to come, as I complete the latter two free levels.
