@@ -26,24 +26,24 @@ The solution I eventually arrived at was as follows:
 This one probably needs some explanation, so I will break it down below.
 
 Our injection point exists within the `player.killedBy()` function, which is part of the `'onCollision': function (player)` property, which is one of multiple properties defined in the `map.defineObject('water'` declaration. Simplified, and with other pieces removed, the syntax is as follows:
-```
+~~~ javascript
 map.defineObject('water', {
     'onCollision': function (player) {
         player.killedBy(<arbirtraryCodeHere>);
     }
 });
-```
+~~~
 So, in order to break out of the existing structure, we need to terminate first the 'killedBy' function using `);`, then terminate the 'onCollision' property using `}` so we have moved our logical injection point: `);}`
 
 This isn't a solution, but now we have moved our arbitrary code location as follows:
-```
+~~~ javascript
 map.defineObject('water', {
     'onCollision': function (player) {
         player.killedBy();}
     <arbirtraryCodeHere>);
     }
 });
-```
+~~~
 Any code we write is now in the property list of the defineObject function, rather than in the argument list of the killedBy function.
 
 We don't want water to kill the player, so why don't we redefine the 'onCollision' property? There is no validation going on to prevent this, so when the code runs, onCollision will be defined to kill the player, and then overwritten with whatever we define it as. Let's define it to do nothing:
@@ -51,7 +51,7 @@ We don't want water to kill the player, so why don't we redefine the 'onCollisio
 
 Now, cleaned up for proper presentation, the code reads like this:
 
-```
+~~~ javascript
 map.defineObject('water', {
     'onCollision': function (player) {
         player.killedBy();
@@ -59,7 +59,7 @@ map.defineObject('water', {
     'onCollision':''<arbitraryCodeHere>);
     }
 });
-```
+~~~
 This is looking good, but there is a problem: since we co-opted some of the open parens and braces above our injection point by closing them early, we have left an unmatched `}`, and left the remaining `});` hanging. This invalidates the code and we get an error when we try to run it:
 ![Screen-Shot-2017-09-15-at-12.42.29-PM](/assets/images/Screen-Shot-2017-09-15-at-12.42.29-PM.png)
 
@@ -73,7 +73,7 @@ Finally, we end up with: `);},'onCollision':''});map.defineObject('',{a:{//`.
 
 Or, formatted and commented:
 
-```
+~~~ javascript
 map.defineObject('water', {
     'onCollision': function (player) {
         player.killedBy(); //Kill the player (our code starts here)
@@ -84,6 +84,6 @@ map.defineObject('', { //Do nothing, needed for syntax
     a:{ //Do nothing, needed for syntax (our code ends here)
     }
 });
-```
+~~~
 
 This was another great example of the dangers of code injection, and how improper input validation can result in drastic changes being made, even within relatively complex blocks of code that provide a limited input length.
