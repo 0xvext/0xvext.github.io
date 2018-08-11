@@ -1,7 +1,7 @@
 ---
 title: Jekyll + Github Pages vs. Ghost self-hosting.
 date: '2018-08-11 18:57:33'
-tags: jekyll github ghost
+tags: jekyll githubpages ghost
 ---
 I've been meaning to get these thoughts up on the blog for a bit, since [transitioning](https://vext.info/2018/07/29/migrating-from-ghost-to-jekyll-and-github-pages.html) from a self-hosted instance of Ghost to Jekyll-powered Github Pages. As previously described, the overall reason for the change was my concern about self-hosting a dynamic page while not having the time to properly monitor and manage such a platform. While I have different reservations with relying on third-party hosting, Github Pages seems to be a good fit, thus far. This blog is nowhere near their [usage limits](https://help.github.com/articles/what-is-github-pages/#usage-limits, so until and unless I hit them, I don't have much to worry about in that regard. Remains to be seen what the whole [Microsoft acquisition](https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/) will mean for the platform.
 
