@@ -13,7 +13,7 @@ All that is sorted, finally, and the page is back up, and if I say so myself, be
 This is my first new post since the migration, so I am still learning the workflow. I will likely write up my overall experience with the migration and the use, once I feel a bit more comfortable and have an idea of the ins and outs.
 
 To do:
-* Fix old permalinks
-* Fix formatting issues on a blog post or two
-* Optimize workflow
+* ~~Fix old permalinks~~
+* ~~Fix formatting issues on a blog post or two~~
+* WIP: Optimize workflow
 * Write up thoughts on the overall experience.
