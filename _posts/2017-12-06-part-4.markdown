@@ -99,4 +99,4 @@ Free as in beer. Donate to support the project if you think it's worthwhile and 
 
 
 
-There is more to come, yet. Future posts will get into more detailed feature descriptions and comarisons, an overview of a performance/support issue I encountered, and my assessment of the security implications of each solution.
+There is more to come, yet. Future posts will get into more detailed feature descriptions and comparisons, an overview of a performance/support issue I encountered, and my assessment of the security implications of each solution.
