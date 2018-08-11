@@ -22,7 +22,7 @@ From the guide:
 Oh boy. I knew I was in for it when I read those terms. In general, when euphemistic language is needed to describe an accident or injury, it is safe to assume that the nature thereof is especially graphic. In my brief searching, I've identified some terms related to these accidents, and summary descriptions of them:
 
 * Step/Side-step/skirt entrapment # Getting caught (typically a garment or hair) between the step of the escalator/walkway and its edge.
-* Degloving # Use your imagination. Hint: You weren't wearing a glove :|[^2]
+* Degloving # Use your imagination. Hint: You weren't wearing a glove :\|[^2]
 
 [^2]: https://www.youtube.com/watch?v=CztT_pBFQv8
 
