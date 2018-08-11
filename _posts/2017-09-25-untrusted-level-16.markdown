@@ -21,7 +21,7 @@ Now we get a much clearer picture of what we have to contend with:
 ![Screen-Shot-2017-09-15-at-2.11.20-PM](/assets/images/Screen-Shot-2017-09-15-at-2.11.20-PM.png)
 
 Since the logic in the code reveals that the player color determines whether or not the lasers are deadly, we can modify a piece of code from a prior level and drop it in to rotate the player color:
-```
+~~~ javascript
 map.getPlayer().setPhoneCallback(function () {
     var player = map.getPlayer();
 
@@ -31,6 +31,6 @@ if (player.getColor() == '#0f0'){player.setColor('red')}
     else if (player.getColor() == 'teal'){player.setColor('#0f0')};
 
 });
-```
+~~~
 
 This level once again shows us the importance of minor changes in code, and it reinforces the importance of saving previously-used modules for future reference or adaption.
