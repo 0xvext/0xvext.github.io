@@ -44,12 +44,12 @@ As for tips, I'll just rattle off some things I have found useful and valuable, 
 Read all the things. Don't limit yourself to only the technical resources out there, as having a well-rounded understanding of security and risk makes you a much more effective tester, and makes you more valuable as a consultant or to a potential employer. 
 
 Some of my favorite security websites:
-* https://www.reddit.com/r/netsec
-* https://arstechnica.com/security/
-* https://www.schneier.com/
-* https://krebsonsecurity.com/
-* https://www.troyhunt.com/
-* https://isc.sans.edu/
+* [Reddit NetSec](https://www.reddit.com/r/netsec)
+* [Ars Security](https://arstechnica.com/security/)
+* [Bruce Schneier](https://www.schneier.com/)
+* [Brian Krebs](https://krebsonsecurity.com/)
+* [Troy Hunt](https://www.troyhunt.com/)
+* [The Internet Storm Center](https://isc.sans.edu/)
 
 Get on Twitter. I resisted this one for a long time because I didn't "get" it, and only VERY recently learned the value of Twitter. The level of direct access that it grants to people you might otherwise never encounter is invaluable, and it moves FAST when major breaches and events are going down. Now that I have a good web of IT folks to follow, I typically hear about new breach events hours or even days before they make it into security blogs/websites. A good place to start is to look up SANS instructors, follow them, and then start following people they follow/retweet. Don't over do it since you can flood yourself with too many tweets to handle, but having a reasonably wide net gives you access to tons of good insights from people living in the biz, and you will meet some great people. 
 I recommend having an account that is just for infosec, so if you use it more casually or with friends you can keep those accounts separate and avoid any embarrassing retweets that are way off topic showing up on your feed.
@@ -58,7 +58,7 @@ Tinker. In order to learn you will have to put in the hours in your spare time, 
 
 Participate in CTFs and both online and offline practice labs that are available. There are some great free sites that teach web app pentesting, some vulnerable VMs that you can pwn offline, and multi-player competitive CTF contests that you can participate in once you have some knowledge under your belt. It's a huge list, but Aman Hardikar's [mind map on practice labs](https://www.amanhardikar.com/mindmaps/Practice.html) is the best compilation of different such resources I've found. Explore them, find some you like, and learn. Approach each one first as a "closed box" and see if you can do it without hints. If not, make use of whatever hint/clue system is provided (some, such as Mutillidae, have tutorials built in, while others require you to look up other people's walkthrough blogs for help on solving them). Use them for what they are: learning resources. The point is not to "win," but rather to further your understanding so that if you encounter a similar scenario in the real world you can use what you have learned in practice. Then later you can play to win ;)
 
-Last but by no means least, read the CFAA: https://en.wikipedia.org/wiki/Computer_Fraud_and_Abuse_Act
+Last but by no means least, read [the CFAA](https://en.wikipedia.org/wiki/Computer_Fraud_and_Abuse_Act)
 Read the wiki article and then the full text. It's important to understand the legal implications of this field and to comport yourself in a safe, mature, respectful, authorized, and legal manner.
 The codes of ethics from various certification bodies (ISC2, EC-Council, SANS/GIAC) are also important to read and understand. As you become certified, perform research, and get into working in the field, you are an indirect representative of those bodies, and have to conduct yourself accordingly. It also helps keep you out of trouble.
 
