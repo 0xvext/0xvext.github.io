@@ -21,11 +21,11 @@ As for the logic of completing this level, this post will be a little different,
 2. JavaScript does not inherently use the concept of pointers, due to its definition that function parameters are passed by value, rather than by reference, but [an analogous structure can be created with objects](https://stackoverflow.com/questions/10231868/pointers-in-javascript)
 3. The source code for the 'shuffle' function that is used to randomize the array is available as a comment in the level's code: http://bit.ly/1l6LGQT
 4. The level's code also includes the following comment which appears to be another hint:
-```
+~~~ javascript
        // TODO find a way to remove the API docs
         // wouldn't want the 'good doctor' to find
         // out about map.getCanvasCoords()...
-```
+~~~
 5. The teleportersAndTraps variable is an array made up of objects (as confirmed by using the debugging trick I mentioned in a previous post):
 ![Screen-Shot-2017-09-25-at-10.38.34-AM](/assets/images/Screen-Shot-2017-09-25-at-10.38.34-AM.png)
 6. The canvas variable is apparently an object called a [CanvasRenderingContext2D](https://www.w3.org/TR/2dcontext/)
@@ -44,13 +44,13 @@ This is the first point at which I have bothered to click the "API" button that 
 ![Screen-Shot-2017-09-25-at-1.12.27-PM](/assets/images/Screen-Shot-2017-09-25-at-1.12.27-PM.png)
 
 If you can't view the image, it says:
-```
+~~~ javascript
 map.getCanvasCoords(obj)
 Returns {"x": x, "y": y}, where x and y are the respective coordinates of the given object on the canvas returned by map.getCanvasContext().
-```
+~~~
 
 Continuing with my experimentation, I have reached a method for aiding the player in avoiding all traps reliably:
-```
+~~~ javascript
        var x1 = t1.getX();
         var y1 = t1.getY();
         var x2 = t2.getX();
@@ -67,7 +67,7 @@ Continuing with my experimentation, I have reached a method for aiding the playe
         else if (t2.getType() == 'teleporter' && t1.getType() == 'trap') {
         	map.setSquareColor(x2, y2, 'red');
         }
-```
+~~~
 This results in marking both the traps and the teleporters that lead to traps as red blocks:
 ![Screen-Shot-2017-09-25-at-3.38.37-PM](/assets/images/Screen-Shot-2017-09-25-at-3.38.37-PM.png)
 
