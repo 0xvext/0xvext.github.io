@@ -8,7 +8,7 @@ tags: untrusted
 This will contain my solutions and explanations for the various levels in the game [Untrusted](https://alexnisnevich.github.io/untrusted/). If you have not played yourself, I highly recommend doing so without reading through this post. Half the fun (and learning potential) of the game is experiencing it yourself and getting the satisfaction of the "Ah ha!" moment.
 `</spoilerwarning>`
 
-##Chapter 1: Breakout
+## Chapter 1: Breakout
 ### Level 1: cellBlockA.js
 A simple introduction to the gameplay. Your 'character' (@) must pick up the 'computer' (⌘) and then move to the exit (⎕). The problem comes in the form of a cell made up of 'blocks' (#) surrounding the player:
 ![Screen-Shot-2017-09-07-at-11.30.52-AM](/assets/images/Screen-Shot-2017-09-07-at-11.30.52-AM.png)
@@ -16,7 +16,7 @@ A simple introduction to the gameplay. Your 'character' (@) must pick up the 'co
 *Fun aside: one of the many names for the pound/hash symbol is* ['octothorpe'](https://en.wikipedia.org/wiki/Numbersign#OthernamesinEnglish).
 
 After picking up the computer, access to a representation of the game's code is provided to the player. The editable portion of the code has to do with the placement of the 'blocks' around the player:
-```
+~~~ javascript
     for (y = 3; y <= map.getHeight() - 10; y++) {
         map.placeObject(5, y, 'block');
         map.placeObject(map.getWidth() - 5, y, 'block');
@@ -26,7 +26,7 @@ After picking up the computer, access to a representation of the game's code is 
         map.placeObject(x, 3, 'block');
         map.placeObject(x, map.getHeight() - 10, 'block');
     }
-```
+~~~
 
 This code first creates a loop that will draw vertical lines of blocks a few spaces away from the left and right canvas boundaries (5 and map.getWidth() -5, respectively), repeating from vertical position 3 to a limit of 10 spaces away from the bottom canvas boundary. Then it performs a similar process horizontally, placing blocks 3 spaces from the top boundary and 10 from the bottom, starting 5 spaces from the left boundary and ending 5 spaces from the right boundary.
 
@@ -71,7 +71,7 @@ To get around this, we can either make adjustments to where the blocks are drawn
 ... or adjust **both** counts of blocks (so that we keep the same total number but position them in a way that is no longer a cell):
 ![Screen-Shot-2017-09-07-at-11.12.44-AM](/assets/images/Screen-Shot-2017-09-07-at-11.12.44-AM.png)
 Code for the latter solution above:
-```
+~~~ javascript
     for (y = 13; y <= map.getHeight() - 3; y++) {
         map.placeObject(5, y, 'block');
         map.placeObject(map.getWidth() - 5, y, 'block');
@@ -81,7 +81,7 @@ Code for the latter solution above:
         map.placeObject(x, 10, 'block');
         map.placeObject(x, map.getHeight() - 3, 'block');
     }
-```
+~~~
 Both of these solutions suffice because the validation check passes; there are still 104 total blocks in each, but they no longer prevent the player from reaching the goal. This is a good simplified example of how a flawed validation check in an application can allow for tampering of values that the designer did not foresee.
 
 ### Level 4: multiplicity.js
