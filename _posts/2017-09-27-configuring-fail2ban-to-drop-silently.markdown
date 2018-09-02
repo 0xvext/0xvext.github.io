@@ -1,7 +1,7 @@
 ---
 title: Configuring fail2ban to drop silently
 date: '2017-09-27 17:52:19'
-tags: fail2ban
+tags: fail2ban cheatsheets
 ---
 
 # Cheat-sheet version:
@@ -28,3 +28,5 @@ This won't deter a persistent connection attempt, but for simple automated attac
 At a minimum, it will slow some tools that modify their rate limiting behavior between response/no response.
 
 Realistically, all a live adversary needs to do is port scan from another IP to confirm that the host is alive, but for the script-kiddies and simple attacks it will help to remove the system from their radar.
+
+Updated 2018.09.02 - With a better understanding of the risks of features such as fail2ban, I no longer recommend implementing it. The limited protection of shunning a source IP is outweighed by the risk of granting an adversary the ability to write arbitrary content to your system.

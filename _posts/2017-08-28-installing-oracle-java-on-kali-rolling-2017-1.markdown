@@ -1,7 +1,7 @@
 ---
 title: Installing Oracle Java on Kali Rolling 2017.1
 date: '2017-08-28 22:28:50'
-tags: kali
+tags: kali cheatsheets
 ---
 
 # Cheat-sheet version:

@@ -1,7 +1,7 @@
 ---
 title: How to use Steam on Mac OSX
 date: '2017-10-08 17:31:04'
-tags: steam
+tags: steam cheatsheets
 ---
 
 # Cheat-sheet version:

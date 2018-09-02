@@ -1,7 +1,7 @@
 ---
 title: Configuring SNMP v3 on Ubiquiti Edgerouter-X
 date: '2017-10-08 21:55:16'
-tags: ubiquiti
+tags: ubiquiti cheatsheets
 ---
 
 # Cheat-sheet version
