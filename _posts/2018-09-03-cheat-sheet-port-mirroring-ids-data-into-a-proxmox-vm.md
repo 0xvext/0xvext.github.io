@@ -1,13 +1,41 @@
 ---
 title: 'Cheat sheet: Port mirroring IDS data into a Proxmox VM'
 date: '2018-09-03 21:52:01'
-tags: cheatsheets proxmox linux
+tags: cheatsheets proxmox linux mirror
 ---
 
 # Cheat-sheet version:
 
 ~~~ bash
+#!/bin/dash
 
+# seconiontap.sh
+
+SECONIONLOG=/root/seconiontap.log
+
+date >> $SECONIONLOG
+
+echo "####################" >> $SECONIONLOG
+
+echo "Clearing any existing mirror..." >> $SECONIONLOG
+
+ovs-vsctl clear bridge vmbr4 mirrors
+
+echo "Creating mirror on vmbr4 for Security Onion..." >> $SECONIONLOG
+
+ovs-vsctl -- --id=@p get port tap202i1 \
+-- --id=@m create mirror name=span1 select-all=true output-port=@p \
+-- set bridge vmbr4 mirrors=@m >> $SECONIONLOG
+
+echo "Showing existing mirrors..." >> $SECONIONLOG
+
+ovs-vsctl list Mirror >> $SECONIONLOG
+
+echo "####################" >> $SECONIONLOG
+~~~
+Then, run `crontab -e` and add the following line:
+~~~ bash
+@reboot sleep 60 && /root/seconiontap.sh
 ~~~
 
 # Full post:
