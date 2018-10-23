@@ -84,7 +84,7 @@ A good tool to have in your belt if you ever do analysis of suspicious data stre
 
 # Tweet 5/5
 [@jeffmcjunkin](https://twitter.com/jeffmcjunkin) writes:
-![@joswr1ght](../../../assets/images/ScreenShot-2018-10-23-5.png)
+![@jeffmcjunkin](../../../assets/images/ScreenShot-2018-10-23-5.png)
 ""Parsing for Pentesters" by @bluscreenofjeff - https://implicitdeny.org/2016/07/finding-diamonds-rough-parsing-pentesters/ … Great stuff! Def. take a look at .gnmap section - super useful!"
 
 This is a really good write up on fundamentals of using bash and how to be efficient with some command line kung fu. It's a great crash course into how to use pipelining of input/output commands, and the author provides excellent screenshot examples to introduce each of the tools covered (xargs, grep, cut, awk, sed). It's a great read and I highly recommend that anyone working in security (whether new to the field or brushing up on your skills) give it a read.
