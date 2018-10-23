@@ -20,30 +20,30 @@ For me, the host OS is a huge factor of the difference, but there are some other
 
 Quick pro/con list:
 
-MBP
-Pro
-	Mac OS native.
-	Hardware GPU beefy enough to crack passwords with Hashcat.
-	Best touch interface around.
-	Display is second to none.
-	Up to 1TB SSD.
+## MBP
+### Pro
+	* Mac OS native.
+	* Hardware GPU beefy enough to crack passwords with Hashcat.
+	* Best touch interface around.
+	* Display is second to none.
+	* Up to 1TB SSD.
 
-Con
-	Price. Always price with Apple.
-	No full-size USB ports: you need dongles for all the things.
-	Issues with keyboard problems.
-	Keyboard feel and sound.
-	Touch bar is silly and wastes energy.
+### Con
+	* Price. Always price with Apple.
+	* No full-size USB ports: you need dongles for all the things.
+	* Issues with keyboard problems.
+	* Keyboard feel and sound.
+	* Touch bar is silly and wastes energy.
 
-Dell XPS
-Pro
-	Has classic USB ports.
-	Similar form factor for less money.
+## Dell XPS
+### Pro
+	* Has classic USB ports.
+	* Similar form factor for less money.
 
-Con
-	Native OS is Windows (or Linux at best).
-	Just a guess, but I imagine it won't perform as well as MBP.
-	Smaller storage options from Dell. Not sure why this doesn't have a 1TB SSD option.
+### Con
+	* Native OS is Windows (or Linux at best).
+	* Just a guess, but I imagine it won't perform as well as MBP.
+	* Smaller storage options from Dell. Not sure why this doesn't have a 1TB SSD option.
 
 Winner? Depends who's buying. If your company will pay for the decked-out MBP, it's good... but money is an object.
 
@@ -53,8 +53,11 @@ Winner? Depends who's buying. If your company will pay for the decked-out MBP, i
 "Need to inject a Windows command with a param but spaces are stripped? Use a space from an env var e.g. notepad%ProgramFiles:~10,1%file.txt"
 
 This one is a clever way to insert a space into an interface that prevents entering spaces. Presumably this was for some sort of application testing where command injection was found, but the input system was smart enough to strip spaces and normally-encoded spaces.
+
 The brilliance of this technique is that it will use the native environment variables of the host machine that the command is being injected to. This assumes that the process being injected through understands what system variables are, but assuming it does, the string provided ("%ProgramFiles:~10,1%") is a space.
+
 Why? At first I wasn't clear on this. I confirmed my guess that :~10,1 means to start from the beginning of the string, count 10 characters, and then insert 1 character starting from that position ([DOS string manipulation](https://www.dostips.com/DtTipsStringManipulation.php)), but "ProgramFiles" doesn't have any spaces, especially at the 10th position...
+
 Then the duh moment: The string being operated on isn't "ProgramFiles," it's what that variable points to, which on most systems is "C:\Program Files" (or whatever drive letter it happens to be).
 The 10th character is "m," meaning that the next 1 character we insert is a space. Brilliant.
 
