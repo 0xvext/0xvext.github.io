@@ -16,7 +16,9 @@ Note: Some of these are quite old and even out of date. I've been building up my
 "Modern defenders know security controls create attack surface. Beware the attack graph you make practicing InfoSec:"
 
 This is an accurate post, and as a "purple teamer" I do see the validity in this reminder. Every element of complexity that we add to a system has the potential to adversely affect security.
-That said, this shouldn't feed into the "perfect solution fallacy" wherein the argument is made along the lines of "<solution x> has a flaw, therefore it's not good and shouldn't be pursued." Every solution has flaws. There is no perfect solution to any practical problem. So long as the risk taken in applying a solution is less than the risk of **not** applying it, the solution should be applied.
+
+That said, this shouldn't feed into the "perfect solution fallacy" wherein the argument is made along the lines of "$SOLUTION has a flaw, therefore it's not good and shouldn't be pursued." Every solution has flaws. There is no perfect solution to any practical problem. So long as the risk taken in applying a solution is less than the risk of **not** applying it, the solution should be applied.
+
 A recent example: I have been hesitant about the installation of third-party password policy software on Windows Domain Controllers because in general, keeping as little third-party software on DCs as necessary is a good philosophy. But after recently encountering environments with [nFront Password Filter](https://nfrontsecurity.com/products/nfront-password-filter/) and [Password Policy Enforcer](https://anixis.com/products/ppe/) I can attest that the hurdle these solutions impose on an attacker's ability to gain access and move laterally is well worth the risk they might introduce.
 
 # Tweet 2/5
@@ -25,6 +27,7 @@ A recent example: I have been hesitant about the installation of third-party pas
 "me watching people try this help-desk ticket vulnerability attack thing"
 
 This post links to an [excellent write up](https://medium.com/intigriti/how-i-hacked-hundreds-of-companies-through-their-helpdesk-b7680ddc2d4c) on a vulnerability in platforms that allow the creation of objects (in this case, support tickets) via custom account email addresses and simultaneously allow viewing of those objects (tickets) from accounts that can be created without verifying the email addresses used.
+
 It's a brilliant example of a trust-model attack that doesn't rely on any bugs in service-side code or any social engineering.
 
 # Tweet 3/5
@@ -50,19 +53,17 @@ This is some love for Nmap syntax shared by [@Ben0xA](https://twitter.com/Ben0xA
 
 Breaking down the syntax:
 
-`-g88` Specify a source port (space is optional; Kerberos uses port 88)
+~~~
+-g88 # Specify a source port (space is optional; Kerberos uses port 88)
+-sS # Perform a SYN ("stealth") scan
+-Pn # Don't validate the host is alive (avoids 'ping' check, which includes more than just ICMP)
+-n # Don't resolve DNS names
+-p 445 # Specify a target port (space is optional)
+--open # Suppress output for any non-open ports (filtered/closed)
+~~~
 
-`-sS` Perform a SYN ("stealth") scan
+Random aside: Did anybody else notice the second hash that showed up in the live demo of Ben's talk when he was showing how [Responder](https://github.com/lgandx/Responder-Windows) worked?
 
-`-Pn` Don't validate the host is alive (avoids 'ping' check, which includes more than just ICMP)
-
-`-n` Don't resolve DNS names
-
-`-p 445` Specify a target port (space is optional)
-
-`--open` Suppress output for any non-open ports (filtered/closed)
-
-Random aside: Did you notice the second hash that showed up in the live demo of Ben's talk when he was showing how [Responder](https://github.com/lgandx/Responder-Windows) worked?
 It came from another IP address than his demo, and used elements from the audience participation itself... I'm curious what the hashed password value might have been. I'll have to throw it into my cracking rig and see...
 
 That's it for now. This is the second of my "DMs to myself."
