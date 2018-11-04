@@ -13,6 +13,7 @@ Note: Some of these are quite old and even out of date. I've been building up my
 # Tweet 1/5
 [@JohnLaTwC](https://twitter.com/JohnLaTwC/status/699304590500634625) writes:
 ![@JohnLaTwC](../../../assets/images/Screen2018-11-04-01.png)
+
 "Modern defenders know security controls create attack surface. Beware the attack graph you make practicing InfoSec:"
 
 This is an accurate post, and as a "purple teamer" I do see the validity in this reminder. Every element of complexity that we add to a system has the potential to adversely affect security.
