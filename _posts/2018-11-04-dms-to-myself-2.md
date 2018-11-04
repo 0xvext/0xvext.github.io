@@ -24,6 +24,7 @@ A recent example: I have been hesitant about the installation of third-party pas
 # Tweet 2/5
 [@darksim905](https://twitter.com/darksim905/status/911239187378122754) writes:
 ![@darksim905](../../../assets/images/Screen2018-11-04-02.png)
+
 "me watching people try this help-desk ticket vulnerability attack thing"
 
 This post links to an [excellent write up](https://medium.com/intigriti/how-i-hacked-hundreds-of-companies-through-their-helpdesk-b7680ddc2d4c) on a vulnerability in platforms that allow the creation of objects (in this case, support tickets) via custom account email addresses and simultaneously allow viewing of those objects (tickets) from accounts that can be created without verifying the email addresses used.
@@ -33,6 +34,7 @@ It's a brilliant example of a trust-model attack that doesn't rely on any bugs i
 # Tweet 3/5
 [@jeffmcjunkin](https://twitter.com/jeffmcjunkin/status/911323834640474112) writes:
 ![@jeffmcjunkin](../../../assets/images/Screen2018-11-04-03.png)
+
 "This Slack has amazing folk and really awesome discussions. 10/10 would recommend."
 
 I'm brand new to this particular Slack hub, and while I have been admittedly resistant to using ~~millenial IRC~~ Slack in general, I have recently begun to see its value. Find and join some [good](https://bloodhoundhq.slack.com) Slack [hub](https://brakesec.slack.com)(s), socialize, listen, share, learn things. This is vital to growth and development, and networking with others in your field is a great way to spot new opportunities.
@@ -40,6 +42,7 @@ I'm brand new to this particular Slack hub, and while I have been admittedly res
 # Tweet 4/5
 [@troyhunt](https://twitter.com/troyhunt/status/911287697448198145) writes:
 ![@troyhunt](../../../assets/images/Screen2018-11-04-04.png)
+
 "Oh boy..."
 
 This was in regard to a ~~horrifying~~ fascinating [article](https://gizmodo.com/passwords-to-access-over-a-half-million-car-tracking-de-1818624272) on a data breach of car tracking data. The long and short of it was an Amazon S3 bucket that wasn't properly secured. The contents of the bucket included "... email addresses and passwords, as well as some license plates and vehicle identification numbers (VIN)." So, you know, no big deal. This is another of so many examples of why we as consumers should be cautious about what data we entrust to third parties. Nevermind the abuse potential of such technology, if it is in use without the car operator's knowledge.
@@ -47,6 +50,7 @@ This was in regard to a ~~horrifying~~ fascinating [article](https://gizmodo.com
 # Tweet 5/5
 [@hexwaxwing](https://twitter.com/hexwaxwing/status/911673112386768896) writes:
 ![@hexwaxwing](../../../assets/images/Screen2018-11-04-05.png)
+
 "<3 @Ben0xA's scanning recipe. 👌 #DerbyCon \`nmap -g88 -sS -Pn -n -p 445 --open 10.10.250.0/24\`"
 
 This is some love for Nmap syntax shared by [@Ben0xA](https://twitter.com/Ben0xA) in a really good [talk](https://www.youtube.com/embed/AF3arWoKfKg) he gave at Derbycon 2017. Aside from a mistake on Nmap's source-port behavior (Nmap doesn't use the same source/dest port by default) it's good stuff and well worth your time.
