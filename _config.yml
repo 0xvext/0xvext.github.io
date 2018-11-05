@@ -56,7 +56,7 @@ defaults:
     values:
       layout: single
       read_time: true
-      share: true
+      share: false
       related: true
       author_profile: true
 
