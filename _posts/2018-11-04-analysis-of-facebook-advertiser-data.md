@@ -10,7 +10,7 @@ I rarely make use of the platform, and when I do I'm typically reminded of the r
 
 This time around, I decided to spend some time reviewing the information dump [available](https://www.facebook.com/settings?tab=your_facebook_information) in the Facebook settings area. The dump consists of a huge amount of user-visible information (friends, comments, likes, instant messages, etc.) and a small amount of data that isn't usually visible to users.
 
-Of particular interest in this latter category was the "Friend peer group" (in which I am apprently associated with people who are in the "Established Adult Life" stage), the IP address information, and the "Advertisers Who Uploaded a Contact List With Your Information" view. This contains a list of advertising enteities, who, as Facebook describes it, uploaded my information to Facebook.
+Of particular interest in this latter category was the "Friend peer group" (in which I am apprently associated with people who are in the "Established Adult Life" stage), the IP address information, and the "Advertisers Who Uploaded a Contact List With Your Information" view. This contains a list of advertising entities, who, as Facebook describes it, uploaded my information to Facebook.
 
 I ran basic analysis on these advertisers. At a high level, the categories are a bit skewed by one big player:
 
@@ -24,7 +24,7 @@ Normalizing the remaining categories by slicing out the car dealers, the (sidewa
 
 Some observations and questions raised by this data:
 
-* Car dealerships (265) seem to buy/sell/distribute data about individuals like mad. Of the dealership entities in the list, I **might** have had a direct business transaction with **one** of them. I'm not even 100% sure of that one, but it is at least a local dealership whose name I recognize. The other 264 are all around the country, most in states I've never lived in or even visited. Also interestingly, a vary **large, well-known national car chain** that I've done business with is not on the list.
+* Car dealerships (265) seem to buy/sell/distribute data about individuals like mad. Of the dealership entities in the list, I **might** have had a direct business transaction with **one** of them. I'm not even 100% sure of that one, but it is at least a local dealership whose name I recognize. The other 264 are all around the country, most in states I've never lived in or even visited. Also interestingly, a very **large, well-known national car chain** that I've done business with is not on the list.
 
 * The next biggest "category," (trailing by a huge margin), were entities that I couldn't actually verify a single industry for, because their names are so vague that I couldn't confirm what organization had my data. Some examples of these include "Animals," "Creed," "Market Research," and "The Sisters Brothers," among others. Some of these are clearly marketing firms, but **which** marketing firms is harder to nail down.
 
@@ -36,7 +36,7 @@ Some observations and questions raised by this data:
 
 * There are 6 entries for a company that does garage door repair and installation. I do not, nor have I ever, owned a garage. I have no idea why this lands so high.
 
-* There are 5 entries for a company that builds homes. I suppose this one is a big more generic and understandable, but I also haven't had a home built, nor ever looked into building one.
+* There are 5 entries for a company that builds homes. I suppose this one is a bit more generic and understandable, but I also haven't had a home built, nor ever looked into building one.
 
 * 4 different sports entities show up, which is only notable because I have as close to zero interest in sports as possible, and I've certainly never directly used any sports websites or other sports-related services. Possibly something from a gym membership, though?
 
@@ -46,9 +46,9 @@ After these larger groupings, we switch into the fun part: longtail analysis. Th
 
 * One senior living facility shows up. I've always been "geared like" an old man... but damn.
 
-* A tequila distiller is on the list. Another one of those things that I'm sure casts a pretty wide net, but I just don't get it.
+* A tequila distiller is on the list. Another one of those things that I'm sure casts a pretty wide net, but I just don't get it. A heavy drinker I am not, and I may never have actually purchased tequila in my life.
 
-* Oculus shows up, which is probably an example of Facebook just sharing information among its brands, although there is a chance I signed up for some kind of information **before** Facebook acquired them. I honestly can't recall.
+* Oculus shows up, which is probably an example of Facebook sharing information among its brands, although there is a chance I signed up for some kind of information **before** Facebook acquired them. I honestly can't recall.
 
 * There is a child care company on the list. If there are **any** demographic indicators for me having children, somebody's algorithms are way off.
 
@@ -60,6 +60,12 @@ After these larger groupings, we switch into the fun part: longtail analysis. Th
 	1. Products or services I use or have used and,
 	2. Would be sites or services I would have deliberately and directly given my information to
 
-Overall, this leads me to think that Facebook's demographic information isn't as valuable as they make it out to be. This would be in line with recent news that their video ad placement was possibly misrepresented in terms of its value and impact.
+Overall, this leads me to think that Facebook's demographic information isn't as ~~valuable~~ accurate as they make it out to be. This would be in line with [recent news](https://www.washingtonexaminer.com/news/lawsuit-facebook-lied-about-video-metrics-misled-advertisers) that their video ad placement was possibly misrepresented in terms of its value and impact.
 
 I'm also curious why car dealers make up such a huge portion of the advertisers in the list. I suspect that car dealers are part of some big fraternity of information selling/sharing amongst themselves. Who wants to bet they don't do a great job of securing that information?
+
+That aside, this exercise showed me some very important gaps in this superficial way that Facebook gives "control" to its users, with regards to the use of their data: while Facebook discloses a list of advertisers in the personal data dump, they don't clarify who those advertisers are (leaving some of them vague and hard to verify). I think this is something that Facebook should be required to clarify by providing more than just a single name entry for the advertiser in question.
+
+Next, Facebook does not indicate **what** specific data the advertiser had, only that the advertiser "... Uploaded a Contact List With Your Information." I think Facebook should be required to disclose specific details about what information these companies are sharing.
+
+The other big knowledge gap is more complex. Facebook does not provide the user with any indication of how the advertiser originally came to possess the information that they shared with Facebook. This isn't to say that Facebook **should** (or even could) answer that question, but it is an important one that consumers should be able to trace back and get an answer to. I genuinely have no idea why so many car companies, garage door servicers, sports brands, or child care companies have me in their databases. I sure would like to know.
