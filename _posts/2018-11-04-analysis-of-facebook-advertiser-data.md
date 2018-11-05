@@ -12,7 +12,7 @@ This time around, I decided to spend some time reviewing the information dump [a
 
 Of particular interest in this latter category was the "Friend peer group" (in which I am apprently associated with people who are in the "Established Adult Life" stage), the IP address information, and the "Advertisers Who Uploaded a Contact List With Your Information" view. This contains a list of advertising entities, who, as Facebook describes it, uploaded my information to Facebook.
 
-I ran basic analysis on these advertisers. At a high level, the categories are a bit skewed by one big player:
+I performed some basic analysis on these advertisers. At a high level, the categories are a bit skewed by one big player:
 
 ![Longtail](../../../assets/images/Screen2018-11-04-18-01.png)
 
