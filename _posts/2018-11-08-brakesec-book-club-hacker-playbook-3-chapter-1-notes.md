@@ -21,7 +21,7 @@ Pentesting vs. Red Teaming - If you are a pentester, like I am, the switch to re
 PTES - A great model for freelance testers and those learning. In my limited experience, professional pentest companies will truncate it. Treat it like sculpting: Start with everything, and optimize as you find some steps aren't as necessary. Last edited 2014 so really doesn't appear to be maintained.
 
 # Chapter 1
-Mentions DO and AWS; Linode is also good and has a web interface to SSH (buggy, but nice). Ionswitch has a $3.50 tiny option with 1 GB RAM and 10 GB HDD. Good for simple systems like VPN or DNS, etc.
+Mentions [DO](https://www.digitalocean.com) and [AWS](https://aws.amazon.com); [Linode](https://www.linode.com) is also good and has a web interface to SSH (buggy, but nice). [Ionswitch](https://www.ionswitch.com/) has a $3.50 tiny option with 1 GB RAM and 10 GB HDD. Good for simple systems like VPN or DNS, etc.
 
 "... I recommend that you develop your own scripts to set up things such as IPTables rules, SSL certs, tools, scripts and more"
 
@@ -121,14 +121,15 @@ There is a lot of conjecture here, and I'm filling in gaps without full understa
 DNSSEC is an extension to base DNS protocol. Some servers support it and some don't, so my guess is some upstream servers inject those extra bits and dnscat has no idea how to handle that.
 
 Overall process for troubleshooting:
-	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap <br />
-	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)` <br />
-	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap <br />
-	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53` <br />
-	3. Download pcaps from server using SCP <br />
-	`scp username@server:/path/to/dns*.pcap .` # <-- grabs the remote files dns*.pcap and saves them to current directory (.) <br />
-	4. Analyze side-by-side in wireshark <br />
-	`wireshark dnsbad.pcap &wireshark dnsgood.pcap &` <br />
+
+	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap <br /><br />
+	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)` <br /><br />
+	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap <br /><br />
+	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53` <br /><br />
+	3. Download pcaps from server using SCP <br /><br />
+	`scp username@server:/path/to/dns*.pcap .` # <-- grabs the remote files dns*.pcap and saves them to current directory (.) <br /><br />
+	4. Analyze side-by-side in wireshark <br /><br />
+	`wireshark dnsbad.pcap &wireshark dnsgood.pcap &` <br /><br />
 	5. Look for differences in the DNS parsing of each: spotted error in "extended RCODE" having to do with DNSSEC in dnsbad.pcap (does not appear in dnsgood.pcap)
 
 Pcap
@@ -155,5 +156,7 @@ The chapter closes with a quick barrage of other tools, some of which are mainta
 * Test Meterpreter via DNS beaconing.
 
 * Test Domain fronting.
+
+* Set up Let'sEncrypt.
 
 Overall the first chapter has already gotten into some gold. I think it's pretty clear that the author is a pentester primarily, not an author. He says as much in the intro, and that isn't a bad thing. I'm looking forward to testing out Merlin and starting chapter 2.
