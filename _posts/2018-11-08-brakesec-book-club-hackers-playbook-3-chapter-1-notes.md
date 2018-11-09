@@ -1,5 +1,5 @@
 ---
-title: 'Brakesec Book Club: Hacker\'s Playbook 3 - Chapter 1 notes'
+title: 'Brakesec Book Club: HP3 - Chapter 1 notes'
 date: '2018-11-08 22:55:48'
 tags: brakesec bookclub pentesting study lab dnscat troubleshooting pcap
 ---
