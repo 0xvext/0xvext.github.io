@@ -1,10 +1,10 @@
 ---
-title: 'Brakesec Book Club: HP3 - Chapter 1 notes'
+title: 'Brakesec Book Club: Hacker Playbook 3 - Chapter 1 notes'
 date: '2018-11-08 22:55:48'
 tags: brakesec bookclub pentesting study lab dnscat troubleshooting pcap
 ---
 
-I am participating in the Brakesec Book Club (@Brakesec on twitter for more info). This time around is the Hacker's Playbook 3 by Peter Kim.
+I am participating in the Brakesec Book Club ([@Brakesec](https://twitter.com/brakesec) on twitter for more info). This time around is the [Hacker Playbook 3](http://thehackerplaybook.com/dashboard/) by Peter Kim.
 
 This post will serve as a hybrid of my personal notes, some insights based on my work experience, and a very informal book review, of sorts, mixed up into one.
 
@@ -37,7 +37,7 @@ In the book club discussion one of the participants made the point that it makes
 
 An example of a challenge with just running the book's commands: during the setup of "intelligence-gathering" modules per the book's instructions: the process opens a config file in vi for entering a VirusTotal API key. There is no context provided, just a file open in vi with a single parameter. Not too hard to figure out, but likely is for a module that won't come up during the book for a while (or at all), so it's a good example of installing bloat that isn't focused to a deliberate purpose.
 
-Another challenge: Some services are started as part of this process that you might not be aware of:kingphisher is set up on port 80 to the world.
+Another challenge: Some services are started as part of this process that you might not be aware of: kingphisher is set up on port 80 to the world.
 
 postgres is set up on port 5432, though not globally (loopback).
 
@@ -61,17 +61,9 @@ iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED -j ACCEPT
 # Drop invalid input traffic
 iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
 
-# Allow SSH from any IP
-~~iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT~~
-~~iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT~~
-
 # Allow SSH from a single IP/range
 iptables -A INPUT -p tcp -s <IP>/<CIDR> --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
 iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
-
-# Allow HTTP/S from any IP
-~~iptables -A INPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT~~
-~~iptables -A OUTPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate ESTABLISHED -j ACCEPT~~
 
 # Allow HTTP/S from a single IP/range
 iptables -A INPUT -p tcp -s <IP>/<CIDR> -m multiport --dports 80,443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
@@ -115,7 +107,7 @@ I did zero error handling, and it doesn't support ranges for ports, so make sure
 ## dnscat2:
 (Looks like not really maintained anymore)
 
-**Also seems to crash when I do it through public DNS - works when I go direct.**
+**Also seems to crash when I test it through public DNS - works when I go direct.**
 
 I tried looking at the ruby code where the error was being thrown (/opt/dnscat2/server/libs/dnser.rb) but I'm not remotely good enough with ruby to track down the nature of the problem.
 
@@ -129,14 +121,14 @@ There is a lot of conjecture here, and I'm filling in gaps without full understa
 DNSSEC is an extension to base DNS protocol. Some servers support it and some don't, so my guess is some upstream servers inject those extra bits and dnscat has no idea how to handle that.
 
 Overall process for troubleshooting:
-	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap
-	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)`
-	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap
-	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53`
-	3. Download pcaps from server using SCP
-	`scp username@server:/path/to/dns*.pcap .` # <-- grabs the remote files dns*.pcap and saves them to current directory (.)
-	4. Analyze side-by-side in wireshark
-	`wireshark dnsbad.pcap &wireshark dnsgood.pcap &`
+	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap <br />
+	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)` <br />
+	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap <br />
+	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53` <br />
+	3. Download pcaps from server using SCP <br />
+	`scp username@server:/path/to/dns*.pcap .` # <-- grabs the remote files dns*.pcap and saves them to current directory (.) <br />
+	4. Analyze side-by-side in wireshark <br />
+	`wireshark dnsbad.pcap &wireshark dnsgood.pcap &` <br />
 	5. Look for differences in the DNS parsing of each: spotted error in "extended RCODE" having to do with DNSSEC in dnsbad.pcap (does not appear in dnsgood.pcap)
 
 Pcap
@@ -158,7 +150,7 @@ The chapter closes with a quick barrage of other tools, some of which are mainta
 
 ## To do
 
-* https://github.com/Ne0nd0g/merlin - Test this. HTTP/2 is the wave of the future.
+* [https://github.com/Ne0nd0g/merlin](https://github.com/Ne0nd0g/merlin) - Test this. HTTP/2 is the wave of the future.
 
 * Test Meterpreter via DNS beaconing.
 
