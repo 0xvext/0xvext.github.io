@@ -122,14 +122,14 @@ DNSSEC is an extension to base DNS protocol. Some servers support it and some do
 
 Overall process for troubleshooting:
 
-	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap <br /><br />
-	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)` <br /><br />
-	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap <br /><br />
-	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53` <br /><br />
-	3. Download pcaps from server using SCP <br /><br />
-	`scp username@server:/path/to/dns*.pcap .` # <-- grabs the remote files dns*.pcap and saves them to current directory (.) <br /><br />
-	4. Analyze side-by-side in wireshark <br /><br />
-	`wireshark dnsbad.pcap &wireshark dnsgood.pcap &` <br /><br />
+	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap
+	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)``
+	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap
+	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53`
+	3. Download pcaps from server using SCP
+	`scp username@server:/path/to/dns*.pcap .` # <-- grabs the remote files dns*.pcap and saves them to current directory (.)
+	4. Analyze side-by-side in wireshark
+	`wireshark dnsbad.pcap &wireshark dnsgood.pcap &`
 	5. Look for differences in the DNS parsing of each: spotted error in "extended RCODE" having to do with DNSSEC in dnsbad.pcap (does not appear in dnsgood.pcap)
 
 Pcap
