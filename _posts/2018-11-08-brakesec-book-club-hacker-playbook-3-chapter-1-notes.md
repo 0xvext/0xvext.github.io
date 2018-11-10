@@ -125,13 +125,13 @@ Overall process for troubleshooting:
 
 
 	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap
-	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)`
+	tcpdump -nn -w dnsgood.pcap -i eth0 port 53
 	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap
-	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53`
+	tcpdump -nn -w dnsbad.pcap -i eth0 port 53
 	3. Download pcaps from server using SCP
-	`scp username@server:/path/to/dns*.pcap .` # <-- grabs the remote files dns*.pcap and saves them to current directory (.)
+	scp username@server:/path/to/dns*.pcap . # <-- grabs the remote files dns*.pcap and saves them to current directory (.)
 	4. Analyze side-by-side in wireshark
-	`wireshark dnsbad.pcap &wireshark dnsgood.pcap &`
+	wireshark dnsbad.pcap &wireshark dnsgood.pcap &
 	5. Look for differences in the DNS parsing of each: spotted error in "extended RCODE" having to do with DNSSEC in dnsbad.pcap (does not appear in dnsgood.pcap)
 
 Pcap
