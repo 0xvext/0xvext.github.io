@@ -31,7 +31,7 @@ You are unlikely to know somebody else's tool as well as you know your own. PTF 
 
 As a challenge, think of PTF not as a tool to use but an an example of what you should aspire to make for yourself and your team, or, failing that, a tool to make your own and extend (but make sure you understand the pros and cons of forking).
 
-A downside to just using the commands in the book are you have no idea what all got installed without looking through it all after the fact. You will learn the tools better by adding the ones you need when you identify a specific need. The challenge with Kali is how many tools it includes (overwhelm), and PTF has grown to this same approach. You will also miss errors and not know it until you try to use the tool(s) that had errors.
+A downside to just using the commands in the book is you have no idea what all got installed without looking through it all after the fact. You will learn the tools better by adding the ones you need when you identify a specific need. The challenge with Kali is how many tools it includes (overwhelm), and PTF has grown to this same approach. You will also miss errors and not know it until you try to use the tool(s) that had errors.
 
 In the book club discussion one of the participants made the point that it makes sense to either go with Kali and manually install additional tools, or start with Ubuntu (or similar) and use PTF, but not try to mix the two. I think you can use PTF on Kali but you have to be *very* selective in what you try to install; if you try to install a tool that Kali already includes, you will almost certainly break stuff. You still might mess up some dependencies even if you don't.
 
@@ -96,11 +96,12 @@ I did zero error handling, and it doesn't support ranges for ports, so make sure
 
 * There are lots of good links to reading material and tools in the first chapter, though some of the tools referenced are no longer actively maintained.
 
-* Aggressor is super powerful - The documentation on it is really well done and thorough
+* Aggressor is super powerful - The documentation on it is really well done and thorough.
 
 * As observed in the book club meeting, the author doesn't do a great job of clarifying what the syntax being provided is for: some of the commands suggested are "install all the things!" and some of them are "install this one specific thing." As the reader, you don't need to take both approaches: if you just follow all the commands in the book in sequence you will break some things by trying to re-install tools that were already installed in the previous steps. Again, it's a better idea to selectively install what you need, rather than the hail mary.
 
-* Registering DNS: godaddy, porkbun, namecheap, others. Just search for who has the best deal; don't renew after the first year for lab stuff (renewals are higher than first registration).Make sure you order one that includes DNS privacy at no extra cost, otherwise your name/address info can be looked up.
+* Registering DNS: godaddy, porkbun, namecheap, others. Just search for who has the best deal; don't renew after the first year for lab stuff (renewals are higher than first registration).
+	Make sure you order one that includes DNS privacy at no extra cost, otherwise your name/address info can be looked up.
 
 * Powershell install was done with PTF based on the commands given, so the manual install instructions are only needed for a one-off setup.
 
@@ -111,7 +112,7 @@ I did zero error handling, and it doesn't support ranges for ports, so make sure
 
 I tried looking at the ruby code where the error was being thrown (/opt/dnscat2/server/libs/dnser.rb) but I'm not remotely good enough with ruby to track down the nature of the problem.
 
-**Spoilers: workaround is --no-cache**
+**Spoilers: workaround is ``--no-cache`**
 
 ### Details:
 I think I may have partly figured out the issue I was having with dnscat2 in our meeting last night. I don't fully understand it yet, but I think it is partly related to DNSSEC functionality (which I don't think dnscat2 supports).
@@ -122,8 +123,9 @@ DNSSEC is an extension to base DNS protocol. Some servers support it and some do
 
 Overall process for troubleshooting:
 
+
 	1. Start pcap, writing to file (dnsgood.pcap), run direct-connect DNS session, then end pcap
-	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)``
+	`(tcpdump -nn -w dnsgood.pcap -i eth0 port 53)`
 	2. Start pcap, writing to file (dnsbad.pcap), run DNS session through public DNS infrastructure, then end pcap
 	`tcpdump -nn -w dnsbad.pcap -i eth0 port 53`
 	3. Download pcaps from server using SCP
