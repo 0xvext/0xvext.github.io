@@ -112,7 +112,7 @@ I did zero error handling, and it doesn't support ranges for ports, so make sure
 
 I tried looking at the ruby code where the error was being thrown (/opt/dnscat2/server/libs/dnser.rb) but I'm not remotely good enough with ruby to track down the nature of the problem.
 
-**Spoilers: workaround is ``--no-cache`**
+**Spoilers: workaround is `--no-cache`**
 
 ### Details:
 I think I may have partly figured out the issue I was having with dnscat2 in our meeting last night. I don't fully understand it yet, but I think it is partly related to DNSSEC functionality (which I don't think dnscat2 supports).
