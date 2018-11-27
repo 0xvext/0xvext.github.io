@@ -43,7 +43,8 @@ This is one of those challenging areas where criminals are not restrained by the
 [Troy Hunt](https://www.troyhunt.com/the-legitimisation-of-have-i-been-pwned/) has written about this extensively.
 
 # Shout outs
-If you find these posts useful, give the [@Brakesec](https://twitter.com/brakesec) Slack channel a look. It's a really good environment with some cool people. Also, take a look at [apageinsec](https://apageinsec.wordpress.com/2018/11/26/thp3-ch-1-review/) for some much better-written posts that also follow along the book club and the chapters reviewed. 
+If you find these posts useful, give the [@Brakesec](https://twitter.com/brakesec) Slack channel a look. It's a really good environment with some cool people. Also, take a look at [apageinsec](https://apageinsec.wordpress.com/2018/11/26/thp3-ch-1-review/) for some much better-written posts that also follow along the book club and the chapters reviewed.
 
 # To do
 * Revisit all the Amazon S3 labs.
+* Set up Discover from scratch.
