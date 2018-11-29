@@ -59,6 +59,7 @@ defaults:
       share: false
       related: true
       author_profile: true
+      toc: true
 
 locale: "en-US"
 name: vext
