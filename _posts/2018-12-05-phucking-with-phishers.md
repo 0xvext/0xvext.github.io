@@ -155,7 +155,7 @@ headers = [
 ]
 
 hdr = {
-			 'User-Agent': "'" + headers[random.randrange(0,84)] + "'",
+  'User-Agent': "'" + headers[random.randrange(0,84)] + "'",
 }
 ```
 
@@ -210,7 +210,7 @@ domains = [
 for i in list(range(1000000)):
 	# Randomly select a header value
 	hdr = {
-	       'User-Agent': "'" + headers[random.randrange(0,84)] + "'",
+    'User-Agent': "'" + headers[random.randrange(0,84)] + "'",
 	}
 	# Generate a random string@domain.tld combination
 	eml = ''.join([random.choice(string.ascii_letters + string.digits) for n in xrange(random.randrange(3,10))]) + '@' + domains[random.randrange(0,10)] + '.' + tlds[random.randrange(0,8)]
