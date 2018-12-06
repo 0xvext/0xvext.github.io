@@ -222,7 +222,7 @@ for i in list(range(1000000)):
 	print("Submission count: " + str(i) + " - " + eml + " / " + pwd + " - " + str(r))
 ```
 
-I've placed a copy of this code [here]() for reference.
+I've placed a copy of this code [here](https://github.com/0xvext/phishingisbad/blob/master/phishingisbadv2.py) for reference.
 
 The output that would result from this setup is way more annoying to try and filter out, hopefully creating our desired hay stack:
 
