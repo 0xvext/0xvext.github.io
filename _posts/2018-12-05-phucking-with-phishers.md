@@ -70,6 +70,16 @@ with open('6-digits-000000-999999.txt') as input_file:
 		# Print output to the console to confirm the server reseponse (optional)
 		print(r)
 ```
+[ Edited to add: Some readers asked how I determined what to put in the "data" portion of the code above. That came from reviewing the source of the website. It was a simple form with two parameters named email and pass:
+
+```
+...
+<input name="email" type="hidden"...>
+...
+<input name="pass" type="password"...>
+...
+```
+I just used the requests format for submitting a form to include those two parameters. ]
 
 So, if we were to (hypothetically) run this script pointed at the phishing page, it would submit just short of a million worthless entries that look like the following:
 
