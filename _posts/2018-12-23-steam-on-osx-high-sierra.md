@@ -25,16 +25,16 @@ At this point the Steam client should load successfully, allowing login and inst
 # More details and options
 Unfortunately, this process doesn't really lend itself to a cheat sheet. While there are command line options for creating the new APFS volume, there is some risk with trying to create a copy/paste version of those commands: the setup depends on the original configuration of disk(s) present on the machine, and existing APFS volume(s) present. If you enter the wrong values, you could mess up your system. As such, I am only providing the step-by-step instructions through the GUI, which should be safer.
 
-1. Remove the Steam application package from `/Applications` via terminal: `rm -r /Applications/Steam.app`.
-2. Remove the Steam folder from `~/Library/Application Support/` via terminal: `rm -r ~/Library/Application\ Support/Steam`.
+1. Remove the Steam application package from `/Applications` via terminal: `rm -r /Applications/Steam.app`
+2. Remove the Steam folder from `~/Library/Application Support/` via terminal: `rm -r ~/Library/Application\ Support/Steam`
 3. Create a new APFS volume that is **not** case-sensitive:
     1. Open Disk Utility, right-click the internal disk, and select "Add APFS Volume..."
     ![Add APFS Volume...](../../../assets/images/addApfs.png)
     2. On the following dialog, name the volume (I named mine steamPath) and select "APFS" as the format (do NOT use the case-sensitive versions).
     ![Format and name](../../../assets/images/steamPath.png)
 4. Install the Steam application and run it (it will update once, then fail to run anymore).
-5. Move the newly-created folder `~/Library/Application Support/Steam` to the new APFS volume via terminal: `mv ~/Library/Application\ Support/Steam /Volumes/steamPath/.`. <-- Make sure you enter the name you gave the new volume if it's different than "steamPath."
-6. Create a symbolic link in `~/Library/Application Support/` called `Steam` that points to the folder from step 5 via terminal: `ln -s /Volumes/steamPath/Steam ~/Library/Application\ Support/Steam`. <-- Same here.
+5. Move the newly-created folder `~/Library/Application Support/Steam` to the new APFS volume via terminal: `mv ~/Library/Application\ Support/Steam /Volumes/steamPath/.` <-- Make sure you enter the name you gave the new volume if it's different than "steamPath."
+6. Create a symbolic link in `~/Library/Application Support/` called `Steam` that points to the folder from step 5 via terminal: `ln -s /Volumes/steamPath/Steam ~/Library/Application\ Support/Steam` <-- Same here.
 
 Now you should be able to launch the Steam client successfully. Note that you will have to download your games again.
 
