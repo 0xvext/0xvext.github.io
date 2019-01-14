@@ -43,7 +43,7 @@ blacklist rtl2830
 
 You might need to reboot or use rmmod to unload them after adding this.
 
-\5. Continue with the instructions on the rtlamr repo:
+5. Continue with the instructions on the rtlamr repo:
 ```
 		1. go get github.com/bemasher/rtlamr
 		2. In a terminal, start the listener with `rtl_tcp`

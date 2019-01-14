@@ -1,7 +1,7 @@
 ---
 title: 'Brakesec Book Club: Hacker Playbook 3 - Chapter 2 notes'
 date: '2018-11-26 22:09:08'
-tags:
+tags: brakesec bookclub pentesting study lab discover subbrute
 ---
 
 I am participating in the Brakesec Book Club ([@Brakesec](https://twitter.com/brakesec) on twitter for more info). This time around is the [Hacker Playbook 3](http://thehackerplaybook.com/dashboard/) by Peter Kim.
