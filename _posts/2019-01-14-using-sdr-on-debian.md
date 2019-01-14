@@ -42,6 +42,7 @@ blacklist rtl2830
 ```
 
 You might need to reboot or use rmmod to unload them after adding this.
+
 \5. Continue with the instructions on the rtlamr repo:
 ```
 		1. go get github.com/bemasher/rtlamr
