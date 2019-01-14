@@ -26,6 +26,8 @@ Third line
 1. Ordered list item 1
 	1. Sub item
 2. Ordered list item 2
+    An extra line/para that won't break the numbering (4 spaces)
+3. Ordered list item 3
 
 Paragraph
 
@@ -69,4 +71,4 @@ This is an example of a TLA.
 
 This is *red*{: style="color: red"}.
 
-**bold** or *italics* or **_both_** or ~~strikethrough~~. 
+**bold** or *italics* or **_both_** or ~~strikethrough~~.

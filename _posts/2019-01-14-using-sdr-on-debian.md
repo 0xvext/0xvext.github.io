@@ -3,7 +3,7 @@ title: 'Using SDR on Debian'
 date: '2019-01-14 17:04:54'
 tags: sdr debian
 ---
-
+# rtlamr
 Sometimes the instructions don't register, the way they are laid out.
 
 I have a small receive-only SDR USB adapter, and since smart meters are used in my neighborhood, I decided to fire it up and tinker.
@@ -49,7 +49,7 @@ For whatever reason, my brain had issues with [the setup instructions](https://g
 		2. In a terminal, start the listener with `rtl_tcp`
 		3. In another terminal, start the poller with `rtlamr`
 ```
-
+# gqrx
 Unrelated to the above, while I was tinkering with the radio receiver (there are lots of good resources on [rtl-sdr.com](https://www.rtl-sdr.com)), I recalled a cool video I had seen on [Veritasium](https://www.youtube.com/watch?v=CNodxp9Jy4A). This video wasn't news to me when it came out (I had seen Samy's talk in its original form), but the software that Samy was using for demonstration stood out to me. I went back to the video, used "zoom, enhance" (aka I went full screen and squinted a bit) to find the name of the program. That program is called [gqrx](http://gqrx.dk/), and it's really slick. Highly recommend, for those who like to tinker.
 
 Next step: setting up rtlamr-collect!
