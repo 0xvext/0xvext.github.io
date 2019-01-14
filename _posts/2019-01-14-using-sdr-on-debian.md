@@ -33,15 +33,15 @@ For whatever reason, my brain had issues with [the setup instructions](https://g
 		(dvb_usb_rtl28xxu), or enable automatic detaching at compile time.
 		usb_claim_interface error -6
 		Failed to open rtlsdr device #0.
-```
-... at this point, add the following modules to `/etc/modprobe.d/blacklist.conf` to prevent them from being automatically activated during OS boot
-```
-blacklist dvb_usb_rtl28xxu
-blacklist rtl2832
-blacklist rtl2830
-```
+    ```
+    ... at this point, add the following modules to `/etc/modprobe.d/blacklist.conf` to prevent them from being automatically activated during OS boot
+    ```
+    blacklist dvb_usb_rtl28xxu
+    blacklist rtl2832
+    blacklist rtl2830
+    ```
 
-You might need to reboot or use rmmod to unload them after adding this.
+    You might need to reboot or use rmmod to unload them after adding this.
 
 5. Continue with the instructions on the rtlamr repo:
 ```

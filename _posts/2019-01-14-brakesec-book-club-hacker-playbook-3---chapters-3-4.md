@@ -13,7 +13,8 @@ Well, with the holiday and work and such going on, this post got pushed back, an
 # Chapter 3
 The OWASP testing guide is a good reference. It is useful to a new webapp tester for learning initially, and once you know it fairly well you will streamline it to hit the most crucial parts in your tests for efficiency. When you aren't finding common issues, referring back to the testing guide is valuable to look for other finding areas.
 
-There is a Github checklist version linked later in chapter [here](https://github.com/tanprathan/OWASP-Testing-Checklist)
+There is a Github checklist version linked later in chapter [here](https://github.com/tanprathan/OWASP-Testing-Checklist).
+
 I think this is based on the prior OWASP list, but it is still useful.
 
 ## SQLMap
@@ -23,7 +24,9 @@ This tool is not covered in detail, instead being mentioned in passing. Learn th
 To add to the author's recommendation on bug bounties, a good way to get involved and learn can be to start (or join) a team and work on a the bounty together, agreeing to split any reward (focus on the experience, not the reward). For that matter, do "free" bug bounties when just learning, since they are more likely to have undiscovered bugs.
 
 ## Bug template generator
-This is found at [buer.haus](https://buer.haus/breport/): I may be paranoid, but I would learn the format and do it manually. Don't submit your bug details to a third party, even if it's client-side processing.
+This is found at [buer.haus](https://buer.haus/breport/).
+
+I ~~may be~~ am paranoid, but I would learn the format and do it manually. Don't submit your bug details to a third party, even if it's client-side processing.
 
 
 ## Webapp testing tools
@@ -54,10 +57,11 @@ Note: Configuring BeEF to integrate with Metasploit is crucial for real testing.
 
 ## Express
 Express syntax was completely new to me. I'm going to have to note these pages for if and when I run into express in the webapp of a real platform, as I find internalizing these kind of completely foreign new ideas is much easier with a real world implementation in front of me.
+
 Another really good way to learn these platforms is just to build a site using one of them. For example, to learn markdown I built my blog, first using Ghost, then using Jekyll 🙂
 
 ## JSFuck
-This is brilliant. The full list of character mapping can be found [here](https://github.com/aemkei/jsfuck/blob/master/jsfuck.js)
+This is brilliant. The full list of character mapping can be found [here](https://github.com/aemkei/jsfuck/blob/master/jsfuck.js).
 
 This will help better understand why the provided string does what it does, as will the readme of that github repo.
 
@@ -100,7 +104,7 @@ I drew up my own diagrams to better follow along what was being described in the
 
 This is a bit more realistic representation of what is being simulated, with DNS infrastructure being in the picture. Realistically, the attacker would also use at least two (maybe three) boxes: one the actual attacker station, the second a VPS to tunnel things through, in case the attack gets detected. The attacker might also use a third box for DNS responses.
 
-![Lab diagram](../../../assets/images/labdiagram.png))
+![Lab diagram](../../../assets/images/labdiagram.png)
 
 1. Through exploiting a vulnerability that grants command execution...
 2. The attacker gets the vulnerable web server to download a malicious payload (in this case, dnscat2) and run it, compromising the web server with an ongoing session.
@@ -112,5 +116,5 @@ There is a ton of content in this chapter, and I've only scratched the surface o
 
 To do:
 * Make a cheat sheet reference from everything in this chapter. It's all pure gold from a reference standpoint.
-* Build up the labs and test [crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec)
+* Build up the labs and test [crackmapexec](https://github.com/byt3bl33d3r/CrackMapExec).
 * Work on decrypting the "secret" payload from the end of the lab!
