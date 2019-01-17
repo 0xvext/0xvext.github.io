@@ -5,14 +5,15 @@ tags: kali cheatsheets
 ---
 
 # Cheat-sheet version:
-Download [Oracle JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html). 
+Download [Oracle JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html).
 
-`sudo apt install java-package`
-`make-jpkg jre-8u144-linux-x64.tar.gz`
-`sudo dpkg -i oracle-java8-jre_8u144_amd64.deb`
-`sudo update-java-alternatives -s oracle-java8-jre-amd64`
-`java -version`
-
+``` bash
+sudo apt install java-package
+make-jpkg jre-8u144-linux-x64.tar.gz
+sudo dpkg -i oracle-java8-jre_8u144_amd64.deb
+sudo update-java-alternatives -s oracle-java8-jre-amd64
+java -version
+```
 # Full post:
 
 Since I use Cobalt Strike during my pentests, I like to adhere to the developer's [advice](https://www.cobaltstrike.com/help-install) and use Oracle's Java instead of the OpenJDK package. According to [Mr. Mudge](https://www.linkedin.com/in/rsmudge), OpenJDK causes various bugs and issues with Cobalt Strike. Personally I find even the official Oracle JRE buggy enough (especially on Linux), so if using the closed-source version helps reduce such problems, I'm willing.
@@ -47,4 +48,3 @@ Setting up the environment consisted of the following steps (if you are kicking 
 > Java HotSpot(TM) 64-Bit Server VM (build 25.144-b01, mixed mode)
 
 After this, you should be good to go.
-
