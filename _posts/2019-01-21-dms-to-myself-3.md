@@ -14,7 +14,7 @@ Note: Some of these are quite old and even out of date. I've been building up my
 [@DanielX4v3r](https://twitter.com/DanielX4v3r/status/911849582459572226) writes:
 ![@DanielX4v3r](../../../assets/images/dmstome-2019-21-01.png)
 
-"Recommended reading - Windows Privilege Escalation Methods for Pentesters: https://pentest.blog/windows-privilege-escalation-methods-for-pentesters/ … by @pentestblog"
+"Recommended reading - Windows Privilege Escalation Methods for Pentesters: [https://pentest.blog/windows-privilege-escalation-methods-for-pentesters/](https://pentest.blog/windows-privilege-escalation-methods-for-pentesters/) … by @pentestblog"
 
 This blog post by Gokhan Sagoglu on @pentestblog ([blog](https://pentest.blog/)) is great in that it goes into some really granular and well-illustrated details of common privesc methods that are easy to find (such as with automated PowerView scans), but if you haven't executed yourself, might be a bit opaque. @pentestblog doesn't seem to be too active on Twitter lately, but the blog itself is still active and worth reading.
 
@@ -29,7 +29,7 @@ This is a great tip for using Nmap with more versatility than the default. A gre
 # Tweet 3/5 - Getting the goods with CrackMapExec: Part 1
 [@L4bf0x](https://twitter.com/L4bf0x/status/913205630231564290) writes:
 ![@L4bf0x](../../../assets/images/dmstome-2019-21-03.png)
-"One of my all-time fav tutorials for internals: https://byt3bl33d3r.github.io/getting-the-goods-with-crackmapexec-part-1.html … by @byt3bl33d3r"
+"One of my all-time fav tutorials for internals: [https://byt3bl33d3r.github.io/getting-the-goods-with-crackmapexec-part-1.html](https://byt3bl33d3r.github.io/getting-the-goods-with-crackmapexec-part-1.html) … by @byt3bl33d3r"
 
 [@byt3bl33d3r](https://byt3bl33d3r.github.io) is a source of some really excellent information and tools in the pentesting/red teaming space. I've been following his work for some time and I'm always impressed. This is no exception, and though the ecosystem in security is changing rapidly, the insights in this post remain valid. The illustrative use of animated gifs to show commands running is also really excellent for the reader.
 
@@ -41,14 +41,14 @@ And of course there is [a part 2](https://byt3bl33d3r.github.io/getting-the-good
 [@x0rz](https://twitter.com/x0rz/status/913724020796854273) writes:
 ![@x0rz](../../../assets/images/dmstome-2019-21-04.png)
 
-"Privacy implications of email tracking https://senglehardt.com/papers/pets18_email_tracking.pdf … (PDF)"
+"Privacy implications of email tracking [https://senglehardt.com/papers/pets18_email_tracking.pdf](https://senglehardt.com/papers/pets18_email_tracking.pdf) … (PDF)"
 
 Privacy is a crucially important concept - and one that I feel most folks don't think much about or take seriously enough. This is a great read authored by Steven Englehardt, Jeffrey Han, and Arvind Narayanan. I am including excepts from the piece here with my commentary, but you really should give the whole document a read. It's only 18 pages and it has some excellent data analysis.
 
 
 "... a network of hundreds of third parties that track email recipients via methods such as embedded pixels. About 30% of emails leak the recipient’s email address to one or more of these third parties when they are viewed."
 
-Think about that. Nearly a third of every email they analyzed had some sort of tracking mechanism in it. From a bare minimum pragmatic standpoint, those beacons reveal activity on the user's email account, which could result in additional spammy messages coming in. In the most extreme of privacy implications, those beacons could put an individual at risk of their privacy or even personal safety (e.g., in the case of a political protester in a country without protected freedom of speech). The ubiquity of this technology use should concern us all. For further reading on this subject, I highly recommend a paper referenced in this one: [Cookies That Give You Away: The Surveillance Implications of Web Tracking](https://senglehardt.com/papers/www15_cookie_surveil.pdf).
+Think about that. Nearly a third of every email they analyzed had some sort of tracking mechanism in it. From a bare minimum pragmatic standpoint, those beacons reveal activity on the user's email account, which could result in additional spammy messages coming in. In the most extreme of privacy implications, those beacons could put an individual at risk of their privacy or even personal safety (e.g., in the case of a political protester in a country without protected freedom of speech). The ubiquity of this technology use should concern us all. For further reading on this subject, I highly recommend another paper referenced in this one: [Cookies That Give You Away: The Surveillance Implications of Web Tracking](https://senglehardt.com/papers/www15_cookie_surveil.pdf).
 
 The authors "...present a set of heuristics to classify such leak-age as intentional or accidental (Section 4.1). Intentional leakage suggests a business relationship between
 the party sending the information and the party receiving it, whereas accidental leakage happens due to poor programming practices..."
