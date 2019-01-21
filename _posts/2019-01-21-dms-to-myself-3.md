@@ -1,6 +1,6 @@
 ---
 title: 'DMs to myself 3'
-date: '2019-01-14 16:34:25'
+date: '2019-01-21 15:34:25'
 tags: dms twitter opinion reference
 ---
 
