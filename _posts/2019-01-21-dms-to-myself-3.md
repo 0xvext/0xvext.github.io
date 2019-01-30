@@ -65,7 +65,7 @@ I know a fair amount about web tracking and email tracking, but one specific fin
 new domains upon every subsequent reload of the same email."
 This is an interesting and advanced wrinkle in the overall tracking landscape that I had never considered before. It makes sense, though, as there may be value in determining if a reader views the same message multiple times.
 
-# Tweet 1/5 - Windows Privilege Escalation Methods for Pentesters
+# Tweet 5/5 - Windows Privilege Escalation Methods for Pentesters
 [@thegrugq](https://twitter.com/thegrugq/status/913680673973473280) writes:
 ![@thegrugq](../../../assets/images/dmstome-2019-21-05.png)
 
