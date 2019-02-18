@@ -8,7 +8,7 @@ This post is a "living document," intended for me to keep a quick-and-dirty refe
 
 # Passive Recon
 ## Discover Scripts
-https://github.com/leebaird/discover
+[https://github.com/leebaird/discover](https://github.com/leebaird/discover)
 
 # Active Network Enumeration
 ## Nmap
@@ -119,11 +119,11 @@ $(date +%Y-%m-%d-%H-%M-%S)
 ~~~
 
 ## Seclists
-https://github.com/danielmiessler/SecLists
+[https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
 
 # Generating exploit payloads
 ## Veil (the newer way)
-https://github.com/Veil-Framework/
+[https://github.com/Veil-Framework/](https://github.com/Veil-Framework/)
 
 ## MSFVenom (the old way)
 ### Generating a typical payload
