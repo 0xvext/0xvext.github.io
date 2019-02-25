@@ -152,7 +152,7 @@ Settings for the handlers must match those of the payload.
 ## Invoke-CradleCrafter
 [https://github.com/danielbohannon/Invoke-CradleCrafter](https://github.com/danielbohannon/Invoke-CradleCrafter)
 
-PS > Import-Module Invoke-CradleCrafter.ps1 && import-module Out-Cradle.ps1
+`PS > Import-Module Invoke-CradleCrafter.ps1 && import-module Out-Cradle.ps1`
 
 Obfuscate all the things, drop into batch/hta/whatever.
 
