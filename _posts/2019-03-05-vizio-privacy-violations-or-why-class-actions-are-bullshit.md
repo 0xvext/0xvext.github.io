@@ -182,6 +182,19 @@ Seriously? So apparently the court system is pay to play, not just for lawyers, 
 
 There go those bullshit detectors, again.
 
+My main takeaway from this whole process is that I can be automatically named into a class for which an action is brought, but I can't access any of the arguments (on either side) relating to that action without paying my own money to request them.
+
+Based on my own level of knowledge, there are some rather important details that bring the specifics of the proposed settlement into question, but I can't even do my own research on the matter without ponying up for a service that is unironically named "Public Access" yet which is pay to play.
+
+# Summary
+
+Let's summarize the bullshit:
+
+* Arbitrarily limiting how many people in a household can be part of the class
+* Seemingly arbitrary value estimation... I'm not a lawyer so I'm guessing there is some established guideline for this... but I can't access the filing system without paying, so I'm uninformed
+* Apparent assumption that 'deleting the data' is in any way a punishment or hardship for Vizio
+* PACER system costs money to view court filings.
+
 Wait, what's that last part?
 
 ![PACER](../../../assets/images/pacer13.png)
