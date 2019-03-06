@@ -4,7 +4,8 @@ date: '2019-03-05 20:19:53'
 tags: law vizio privacy
 ---
 
-Between February 2014 and February 2017, Vizio collected and sold information about viewing habits, as collected through such Vizio TVs, without clearly disclosing the nature of their collection or disclosure to their paying customers. As a result, there is a class action lawsuit against Vizio:
+# Background
+Between February 2014 and February 2017, Vizio collected information about customer viewing habits through their Vizio Smart TVs, and sold that information, all without clearly disclosing the nature of their collection or disclosure to their paying customers. As a result, there is a class action lawsuit against Vizio:
 
 "*The  lawsuit  alleges  VIZIO  violated  privacy  laws  and  consumer-protection  laws  by  collecting  sensitive  information  about  what  was  displayed  on  certain VIZIO  Smart  TVs  during  the  time  period above for sale to advertisers. The lawsuit also alleges VIZIO did this without the consent or knowledge of persons who bought these TVs. VIZIO denies these allegations.*"
 
@@ -12,6 +13,7 @@ Now, I'm not a lawyer, so I have no idea whether what they did "violated privacy
 
 Note, of course, that none of the above discusses whether or not what Vizio did was **wrong**.
 
+# A Random Privacy Abuse Appears!
 But I should back up a bit. Why do I care about this? I own a Vizio TV. One day last week, I turned my TV on to use the Pandora app, intending to listen to some music while working on my computer. Instead of a simple experience of turning on, tuning in, and rocking out, I was instead presented with this message:
 
 ![Fuck off, Vizio](../../../assets/images/fuckoffvizio3.png)
@@ -19,7 +21,7 @@ But I should back up a bit. Why do I care about this? I own a Vizio TV. One day 
 Well. That's just lovely. My response on Twitter was none too gentle:
 
 [@0xvext](https://twitter.com/0xvext/status/1101509727241076736) writes:
-![@0xvext](../../../assets/images/fuckoffvizio2.png)
+![@0xvext](../../../assets/images/fuckoffvizio1.png)
 
 "Hey @Verizon @verizonmedia @AOL @Yahoo @VIZIO, when a person turns on their TV, they shouldn’t be forced to surrender their rights to use the device they paid for. The only reason to demand such is you intend to abuse user privacy. How about you go fuck yourself?"
 
@@ -38,7 +40,8 @@ I'm not an Apple fanboy, but of the monolithic tech companies we have today, the
 
 Setup complete, I proceeded to continue with my plan of listening to some good music while working from home, to worry over the Vizio TV another day.
 
-The next day, turning on my TV again, I was faced with a different message. This one was no longer the "surrender your rights" screen that had remained on screen the entire day prior, but instead a notice regarding a class action lawsuit against Vizio, informing me that I may be part of the class, and could submit a claim at a specific URL. I don't have a picture of that message, because it was on screen for no more than a minute or two before it went away, with no interaction from me. I was literally picking up my phone to take a picture when the message vanished from the screen.
+# Another Day, Another Message
+The next day, turning on my TV again, I was faced with a different message. This one was no longer the "surrender your rights" notice that had remained on screen the entire day prior, but instead a notice regarding a class action lawsuit against Vizio, informing me that I may be part of the class, and could submit a claim at a specific URL. I don't have a picture of that message, because it was on screen for no more than a minute or two before it went away, with no interaction from me. I was literally picking up my phone to take a picture when the message vanished from the screen.
 
 So, thus far, we have:
 
@@ -52,6 +55,7 @@ Classy, Vizio. Real classy.
 
 So, to be very clear, I have since factory-reset my Vizio TV and taken it off my wireless network. I will no longer be using the "Smart TV" features of the device, because I do not intend to accept Vizio's (or OATH's, or whoever the hell they are now) terms of service with regards to "mutual arbitration" and a "class action waiver."
 
+# Understanding Your Rights
 So, what next? Well, I searched and found the [website](https://viziotvsettlement.com) of the class action suit. The domain is registered through GoDaddy, so that doesn't help much with confirming who runs it. Looking further on the site, it appears to be set up by an organization called A.B. Data, Ltd. I'm not entirely clear if they set this up on behalf of Vizio or the class representatives.
 
 Looking into the site and the information presented on it is a rabbit hole all on its own. The following is my own brief - and, spoilers, demoralizing - adventure into that rabbit hole.
@@ -60,7 +64,7 @@ Let's start at the top:
 
 ![Fuck off, Vizio](../../../assets/images/fuckoffvizio5.png)
 
-Ok, so... informative. No accounting for taste, on the colors, but it does grab the attention.
+Ok, so... informative. No accounting for taste, on the colors, but it does grab the attention. Let's see... what's this about a claim..?
 
 ![Fuck off, Vizio](../../../assets/images/fuckoffvizio6.png)
 
@@ -80,13 +84,15 @@ Next, the important information on how to determine if you are a member of the a
 
 ![Fuck off, Vizio](../../../assets/images/fuckoffvizio9.png)
 
-Huh. Only one purchaser per Smart TV per household may qualify to submit a claim. That seems... odd. Couldn't multiple members of a household have had their privacy violated?
+Huh. Only one purchaser per Smart TV per household may qualify to submit a claim. That seems... odd. Couldn't multiple members of a household have had their privacy violated? My bullshit detectors start to warm up...
+
+# $$$
 
 Next we get into some numbers:
 
 ![Fuck off, Vizio](../../../assets/images/fuckoffvizio10.png)
 
-Ok, $17 million into a fund... after lawyers get their cut (spoilers: it's about 1/3 of the total, plus some more)... I'm not sure how they determined that value, but maybe we will learn more.
+Ok, $17 million into a fund... after lawyers get their cut (spoilers: it's about 1/3 of the total, plus some more)... they expect that to be $13 to $31 per claim. I'm not sure how they determined the starting value of the fund, but maybe we will learn more.
 
 (In other news: I should have gone to law school.)
 
@@ -123,6 +129,7 @@ And finally, and most importantly, if you still have questions, as I do, a last 
 
 ![Fuck off, Vizio](../../../assets/images/fuckoffvizio16.png)
 
+# Down the Rabbit Hole
 Ok, great! We have a URL (though not a link, you might notice) to the PACER system. Public access to court electronic records sounds like a good thing! I bet that will have answers to the outstanding questions re: how much benefit Vizio gained from the data they already sold, and how much it's worth in today's value.
 
 ![PACER](../../../assets/images/pacer1.png)
