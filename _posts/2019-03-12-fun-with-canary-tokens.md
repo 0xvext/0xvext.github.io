@@ -52,7 +52,7 @@ In all seriousness, thanks to neo and everyone else who contributes their time t
 
 Then I tried the AV on my Windows machine, [GENERICAV]. It also didn't detect anything. Hmm. Well, Defender has gotten better in recent years, so let's try that...
 
-![Windows Defender](../../../assets/images/canary-clip01.png)
+![Windows Defender](../../../assets/images/canaryclip01.png)
 
 No, huh? Ok, well surely **some** AV is going to catch it...
 
