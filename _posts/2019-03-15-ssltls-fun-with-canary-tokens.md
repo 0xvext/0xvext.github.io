@@ -42,13 +42,13 @@ Spoilers: The answer to both questions is "yes," but not both at the same time, 
 
 # Browser Security
 
-Hiding the origin of an HTTP element is trivial if you control a DNS domain. Simply set up an A record of your choosing to point to the same IP address as the domain in the original URL, and voila, "HTTP overloading":
+Hiding the origin of an HTTP element is trivial if you control a DNS domain. Simply set up an A record of your choosing to point to the same IP address as the domain in the original URL, and voila, "DNS overloading":
 
 ![HTTP overloading](../../../assets/images/canary-02-04.png)
 
 This gets a little more complex if the destination has a rotating IP address, and it doesn't resolve the original problem of showing the "all clear" with regards to HTTPS in the browser.
 
-Next I tried using HTTPS URLs instead of HTTP URLs for the Canary Tokens. I know the site for the tokens supports HTTPS (also through Let's Encrypt), but I had a suspicion this wouldn't work, with the HTTP overloading. I was surprised when I reloaded the page and got a green padlock... but then I realized the token was no longer firing. Clearly the browser was having none of this kind of dirty trick:
+Next I tried using HTTPS URLs instead of HTTP URLs for the Canary Tokens. I know the site for the tokens supports HTTPS (also through Let's Encrypt), but I had a suspicion this wouldn't work, with the DNS overloading. I was surprised when I reloaded the page and got a green padlock... but then I realized the token was no longer firing. Clearly the browser was having none of this kind of dirty trick:
 
 ![No you may not](../../../assets/images/canary-02-05.png)
 
@@ -68,3 +68,5 @@ So what to do? Well, that depends on the ultimate goal:
 ![Now everything is right with the world](../../../assets/images/canary-02-07.png)
 
 For this site, since I'm not interested in either, I've removed the auto-loading Canary Token reference entirely, but kept the hidden anchor tag to see what kind of crawlers poke around the hidden elements of the site. Since that anchor tag doesn't auto load any content, using unencrypted HTTP doesn't set off any alerts in the browser. I wonder if one day we will see browsers complaining if an HTTPS site contains a single non-secure HTTP link... 🤔
+
+[Edited to add: In the few minutes it took me to fix a couple words in this post, GoogleBot had already visited the hidden URL in the page's source twice :D]
