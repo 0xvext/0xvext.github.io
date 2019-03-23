@@ -309,6 +309,8 @@ Save the output file for parsing offline with mimikatz.
 #### Secretsdump.py
 `secretsdump.py -just-dc-ntlm <fulldomain</<user>@<ipaddress>`
 
+### Various Pillaging
+
 #### Extracting Files from .kbf (NTBackup) files
 
 [https://github.com/sjmurdoch/mtftar](https://github.com/sjmurdoch/mtftar) (works on Linux)
