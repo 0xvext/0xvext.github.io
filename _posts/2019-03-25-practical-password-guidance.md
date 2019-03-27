@@ -270,7 +270,7 @@ The basic concept is simple:
 Remember the example from earlier?
 * **I am the very model of a modern major general. War, war never changes.**  
 ```
-^ Lyric from The Pirates of Penzance    ^ Quote from the Fallout video game series.
+^ Lyric from The Pirates of Penzance               ^ Quote from the Fallout video game series.
 ```
 
 Both of these parts, by themselves, show up in cracking dictionaries. But (prior to posting this blog), the combination of the two did not. There would be no reason for them to appear that way, because who would ever combine them?
