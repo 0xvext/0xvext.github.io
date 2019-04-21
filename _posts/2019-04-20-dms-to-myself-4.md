@@ -10,7 +10,7 @@ These posts will be a ~~hopefully regular~~ ~~probably sporadic~~ review of inte
 
 Note: Some of these are quite old and even out of date. I've been building up my pile of saved tweets for a while now, and these posts start with the oldest based on when I saw them.
 
-# Tweet 1/5 - blurb
+# Tweet 1/5 - Pentest Note Taking
 [@m3g9tr0n](https://twitter.com/m3g9tr0n/status/911957911961825281) writes:
 ![@m3g9tr0n](../../../assets/images/dms-tm-04-01.png)
 
@@ -32,7 +32,7 @@ This tweet alone is worth a blog post. There were a ton of replies with what fol
 
 There were a few other tools mentioned, some of which I couldn't find by the names used in the tweets, and some of which I think were a bit out of scope for the original question asked. This tweet was from 2017, but another up-and-comer these days that is highly recommended by a colleague of mine is [Notion](https://www.notion.so/). This one has a long way to go in the features department, but they are off to a great start. I'll be keeping my eye on this one.
 
-# Tweet 2/5 - blurb
+# Tweet 2/5 - Terms of Service
 [@waxzce](https://twitter.com/waxzce/status/898548366958673920) writes:
 ![@waxzce](../../../assets/images/dms-tm-04-02.png)
 
@@ -46,7 +46,7 @@ Terms of service are often too long to read, but it's important to understand wh
 
 They offer a plugin for web browsers. I'm a bit wary of that part, but the overall project is a great idea, and I've referred to it multiple times. Probably one of the biggest challenges is simply the scale of the problem at hand, and trying to keep track and maintain up to date information about numerous companies/services.
 
-# Tweet 3/5 - blurb
+# Tweet 3/5 - Twitter Geocode Searching
 [@xKaliSec](https://twitter.com/xKaliSec/status/913803139240939520) writes:
 ![@xKaliSec](../../../assets/images/dms-tm-04-03.png)
 
@@ -58,7 +58,7 @@ I had seen prior art on identifying images from platforms like instagram and fac
 
 There is a pretty obvious high-popularity tweeter that seems to be absent from the data, but there is still a huge amount of room for abuse of this feature. My gut instinct is there is more abuse potential than legitimate use/research, but I'd be curious to read the thoughts of others, on the matter.
 
-# Tweet 4/5 - blurb
+# Tweet 4/5 - Under the Wire PowerShell
 [@Lee_Holmes](https://twitter.com/Lee_Holmes/status/906261930142081024) writes:
 ![@Lee_Holmes](../../../assets/images/dms-tm-04-05.png)
 
@@ -70,7 +70,7 @@ I've spent about five minutes on this "wargames" site and I'm already in love. T
 
 This reminds me a lot of the JavaScript game Untrusted that I have [posted about before](https://vext.info/2017/09/07/untrusted-a-user-javascript-adventure-game.html). I may have a new series of walkthroughs to work on, soon...
 
-# Tweet 5/5 - blurb
+# Tweet 5/5 - Retrieving Wifi Passwords
 [@DynamicWebPaige](https://twitter.com/DynamicWebPaige/status/914240788103561216) writes:
 ![@DynamicWebPaige](../../../assets/images/pic1.png)
 
