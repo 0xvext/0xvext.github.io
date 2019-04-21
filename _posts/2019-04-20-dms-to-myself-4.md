@@ -72,7 +72,7 @@ This reminds me a lot of the JavaScript game Untrusted that I have [posted about
 
 # Tweet 5/5 - Retrieving Wifi Passwords
 [@DynamicWebPaige](https://twitter.com/DynamicWebPaige/status/914240788103561216) writes:
-![@DynamicWebPaige](../../../assets/images/pic1.png)
+![@DynamicWebPaige](../../../assets/images/dms-tm-04-06.png)
 
 "Did you know that "netsh wlan show profile" shows every network your computer has ever connected to? And "key=clear" shows the *passwords*?"
 
