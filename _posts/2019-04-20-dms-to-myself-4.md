@@ -36,7 +36,7 @@ There were a few other tools mentioned, some of which I couldn't find by the nam
 [@waxzce](https://twitter.com/waxzce/status/898548366958673920) writes:
 ![@waxzce](../../../assets/images/dms-tm-04-02.png)
 
-"“I have read and agree to the Terms” is the biggest lie on the web. We aim to fix that. [https://tosdr.org/](https://tosdr.org/)  // very good idea, Thank you""
+"“I have read and agree to the Terms” is the biggest lie on the web. We aim to fix that. [https://tosdr.org/](https://tosdr.org/)  // very good idea, Thank you"
 
 This is an amazing project that seeks to inform users, and make the world just a little bit better of a place. In their own words:
 
