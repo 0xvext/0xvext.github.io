@@ -141,6 +141,13 @@ $(date +%Y-%m-%d-%H-%M-%S)
 ### Ping scan /24 range via loop
 `FOR /L %i in (1,1,255) do @ping -n 1 <prefix>.%i | find "Reply"`
 
+## PowerShell
+### Run command on all files in folders/subfolders
+```
+$files = Get-ChildItem c:\temp\*.txt
+foreach ($file in $files) {<command> $file}
+```
+
 ## Cobalt Strike Aggressor Scripting
 ### Automate setup for DNS beacon
 ```
