@@ -132,6 +132,6 @@ What if you already have a pretty solid resume, and it just needs some improveme
 
 With either approach, I think there is potential here for a worthwhile exercise in tightening up a resume or building a whole new one.
 
-# Another useful tools
+# Another useful tool
 
 All said, I'm loving the use of mind maps, and XMind in particular. I've known about this concept for years but never got around to really giving it a try until recently, which I have to thank my friend for inspiring. I hope others find this write up useful, and that it might inspire some of you to taking advantage of a new tool. If you have some novel uses of mind maps, [send them my way](https://twitter.com/0xvext)!
