@@ -50,7 +50,9 @@ XMind has a gallery of shared example mind maps on [their website](https://www.x
 
 Now that I've illustrated what a mind map looks like, here are some examples of how I find them useful.
 
-# Taking notes
+# Uses
+
+## Taking notes
 
 Whenever I'm taking notes on a new subject, I have gotten into the habit of creating a mind map. A great example of this is when discussing the scope of a security assessment (whether it be a network penetration test, code review, web application test, etc.). One of the early stages of any such engagement is to discuss with the subject matter experts how their system(s) work and how the data flows within it. As the subject matter experts are describing or demonstrating the environment to me, I'll be capturing my understanding in a mind map.
 
@@ -59,7 +61,7 @@ This serves a couple immediate purposes:
 1. It captures the information for my notes. I can either drop the outline structure into a tool like OneNote or Evernote if I need to elaborate on it or add multimedia, and/or I can just keep it as is in mind map form.
 2. It serves a similar purpose to writing things down. I'm rather slow at traditional pen-and-paper writing, but my typing speed is solid. There is some evidence that writing something down, or typing it out (rather than copy pasting) helps to solidify memory (the [generation effect](https://en.wikipedia.org/wiki/Generation_effect)). Anecdotally, I can attest that the simple act of typing up what I'm hearing seems to help increase the likelihood that I will be able to recall that information later. The visual presentation and interactive creation of the mind map format also [seems to help reinforce memory](https://www.mindmeister.com/blog/mind-mapping-benefits-who-needs-mind-maps/).
 
-# Studying
+## Studying
 
 While there is some overlap with #1 above, my "study mode" tends to be quite a bit slower and more deliberate than taking notes in a brief meeting or scoping discussion. This might be a new technical subject that I've never learned before, or an old subject I'm brushing up on. It might be something for work, or for a [really complicated form of entertainment](https://www.pathofexile.com/passive-skill-tree).
 
@@ -95,7 +97,7 @@ There is even enough flexibility in the application to create rough data flow di
 
 ![Data flow diagram](../../../assets/images/Screenshot_2021-04-07_20-40-50.png)
 
-# Identifying knowledge gaps
+## Identifying knowledge gaps
 
 Once the initial information is mapped out, I find that mind maps are great for highlighting areas where additional knowledge is needed. This can be done through color coding, arrangement, with a dedicated "to do" section, or a combination of these. In particular, I've found that once I have really poured my understanding into a mind map, if there are sections that are vastly outsized compared to others, it either indicates:
 
@@ -120,14 +122,14 @@ I did some fleshing out, a little study, and added more to the map. Not bad. Som
 
 Does jotting all that down in a mind map make me an expert in the subject? Not by a long shot. But it gives me a mental framework that I can start associating my experiences with, and it gives me reference material I can call on in the future if and when I start focusing on such tasks or communicating in that space. I am much more likely to be able to speak with some cursory intelligence in an interview on a subject I've studied and mind mapped, than one I only read in a job description. It also revealed to me just how broad that one sub-item was, when I only had a very informal understanding of it to begin with.
 
-# Resume building?
+## Resume building?
 
 This last use is a new idea and I haven't really put it to the test yet. It could end up as a case of "square peg, round hole," stemming from my current infatuation with mind maps. I wonder, though, if there might be a use in mind mapping when building/updating/improving a resume/CV. The nascent idea goes like this:
 
-## Mind map first approach
+### Mind map first approach
 If you're making a resume from scratch (either because you're new to building one, or just think it's time to revamp and start fresh), jot down the key ideas you want to make sure are represented. What are the first things you want a potential employer to think of when they look at your resume for [7.4 seconds](https://www.theladders.com/static/images/basicSite/pdfs/TheLadders-EyeTracking-StudyC2.pdf)? Those are your main topics. Now, what are the key details you need to represent for each of those main topics? Those are your subtopics. Map it all out, **then** start putting the content into your resume template of choice in a word processor.
 
-## Mind map second approach
+### Mind map second approach
 What if you already have a pretty solid resume, and it just needs some improvement? This can be trickier, but try to put yourself in the mind of a recruiter. Open up your resume, and capture the first thing that stands out to you in a mind map. What's the second thing? Into the map it goes. Third thing? Map it. Now, were those three eye-catching elements what you **want** a recruiter or employer to see first? If not, you might at least have a layout problem, and you might need to rework your resume content. This evaluation can probably go a level or two deeper. If you find that your resume doesn't even paint the picture that you intend to yourself, chances are it needs some work. I would venture that this exercise is even more valuable with a partner doing the review for you - a friend or colleague who will humor you by viewing your resume like you were a potential candidate, and mind mapping for you what stood out to them. That mind map can be your input for areas where you might need to rearrange or rephrase the content of your resume.
 
 With either approach, I think there is potential here for a worthwhile exercise in tightening up a resume or building a whole new one.
