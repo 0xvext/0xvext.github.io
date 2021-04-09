@@ -118,11 +118,11 @@ I did some fleshing out, a little study, and added more to the map. Not bad. Som
 
 ![Job description mapping with a rabbit hole](../../../assets/images/Screenshot_2021-04-07_20-48-07.png)
 
-Does jotting all that down in a mind map make me an expert in the subject? Not by a long shot. But it gives me a mental framework that I can start associating my experiences with, and it gives me reference material I can call on in the future if and when I start focusing on such tasks or communicating in that space. I am much more likely to be able to speak with some cursory intelligence in an interview on a subject I've studied and mind mapped, than one I only read in a job descriptions. It also revealed to me just how broad that one sub-item was, when I only had a very informal understanding of it to begin with.
+Does jotting all that down in a mind map make me an expert in the subject? Not by a long shot. But it gives me a mental framework that I can start associating my experiences with, and it gives me reference material I can call on in the future if and when I start focusing on such tasks or communicating in that space. I am much more likely to be able to speak with some cursory intelligence in an interview on a subject I've studied and mind mapped, than one I only read in a job description. It also revealed to me just how broad that one sub-item was, when I only had a very informal understanding of it to begin with.
 
 # Resume building?
 
-This last use is a new idea and I haven't really put it to the test yet. It could end up as a case of "square peg, round hole," " stemming from my current infatuation with mind maps. I wonder, though, if there might be a use in mind mapping when building/updating/improving a resume/CV. The nascent idea goes like this:
+This last use is a new idea and I haven't really put it to the test yet. It could end up as a case of "square peg, round hole," stemming from my current infatuation with mind maps. I wonder, though, if there might be a use in mind mapping when building/updating/improving a resume/CV. The nascent idea goes like this:
 
 ## Mind map first approach
 If you're making a resume from scratch (either because you're new to building one, or just think it's time to revamp and start fresh), jot down the key ideas you want to make sure are represented. What are the first things you want a potential employer to think of when they look at your resume for [7.4 seconds](https://www.theladders.com/static/images/basicSite/pdfs/TheLadders-EyeTracking-StudyC2.pdf)? Those are your main topics. Now, what are the key details you need to represent for each of those main topics? Those are your subtopics. Map it all out, **then** start putting the content into your resume template of choice in a word processor.
@@ -134,4 +134,4 @@ With either approach, I think there is potential here for a worthwhile exercise 
 
 # Another useful tool
 
-All said, I'm loving the use of mind maps, and XMind in particular. I've known about this concept for years but never got around to really giving it a try until recently, which I have to thank my friend for inspiring. I hope others find this write up useful, and that it might inspire some of you to taking advantage of a new tool. If you have some novel uses of mind maps, [send them my way](https://twitter.com/0xvext)!
+All said, I'm loving the use of mind maps, and XMind in particular. I've known about this concept for years but never got around to really giving it a try until recently, which I have to thank my friend for inspiring. I hope others find this write up useful, and that it might inspire some of you to take advantage of a new tool. If you have some novel uses of mind maps, [send them my way](https://twitter.com/0xvext)!
