@@ -46,7 +46,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-include: ["_pages", "trades"]
+include: ["_pages", "trades", "collection"]
 
 defaults:
   # _posts
